@@ -1,0 +1,195 @@
+.backgroundVideoRegister {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.registerTitle {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #222;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.RegisterMain {
+  display: grid;
+  grid-template-columns: 2fr 1px 2fr; 
+  gap: 60px;
+  align-items: center;
+  padding: 60px 80px;
+  min-height: 600px;
+}
+
+.registerZone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 60px; 
+  gap: 20px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.registerZone label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  width: 100%;
+}
+
+.registerZone label span {
+  min-width: 100px;
+  display: inline-block;
+  text-align: right;
+}
+
+.registerZone input {
+  flex: 1;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #bbb;
+  border-radius: 8px;
+  font-size: 17px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.registerZone input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.registerZone button {
+  width: 83%;
+  align-self: flex-end;
+  padding: 14px 0;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: #0069d9;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.registerZone button:hover {
+  background-color: #004a99;
+}
+
+.pHomePage {
+  font-size: 20px;
+  margin-left: 143px;
+}
+
+.verticalDivider {
+  height: 90%;
+  width: 2px;
+  background-color: #ccc;
+  border-radius: 2px;
+  justify-self: center;
+}
+
+.photographZone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f7f9fc, #e5eaf1);
+  padding: 40px 60px;
+  height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.photographZone:hover {
+  transform: scale(1.03);
+}
+
+.registerImage {
+  max-width: 100%;
+  max-height: 95%;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+
+@media (max-width: 768px) {
+  .registerTitle {
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .RegisterMain {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px 20px;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  .registerZone {
+    padding: 25px 20px;
+    gap: 16px;
+  }
+
+  .registerZone label {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+  }
+
+  .registerZone label span {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .registerZone input {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .registerZone button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .pHomePage {
+    font-size: 16px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .photographZone {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .registerImage {
+    width: 100%;
+    height: auto;
+  }
+}

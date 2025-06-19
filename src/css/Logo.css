@@ -1,0 +1,105 @@
+.parent-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icons a svg {
+  transition: transform 0.1s ease;
+}
+
+.icons a:hover svg {
+  transform: scale(1.2); 
+}
+.linkedin-icon {
+  fill: black;
+  width: 40px;
+  height: 40px;
+  transition: fill 0.3s ease;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+}
+
+.linkedin-icon:hover {
+  fill: #0077b5; 
+}
+
+.instagram-icon {
+  fill: black;
+  width: 40px;
+  height: 40px;
+  transition: fill 0.3s ease;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+}
+
+.instagram-icon:hover {
+  fill: #E1306C; 
+}
+
+.x-icon {
+  fill: black;
+  width: 40px;
+  height: 40px;
+  transition: fill 0.3s ease;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+}
+
+.x-icon:hover {
+  fill: #1DA1F2; 
+}
+
+.github-icon {
+  fill: black;
+  width: 40px;
+  height: 40px;
+  transition: fill 0.3s ease;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+}
+
+.github-icon:hover {
+  fill: #5c5c5c; 
+}
+
+@media (max-width: 768px) {
+  .parent-container {
+    width: 80vw; 
+    margin: 0 auto;
+  }
+
+  .icons {
+    justify-content: flex-start; 
+    margin-top: 15px;
+    margin-right: 0;
+    gap: 10px; 
+  }
+
+  .custom-hr {
+    width: 85vw; 
+    left: 55.5%;
+    transform: translateX(-50%);
+  }
+}

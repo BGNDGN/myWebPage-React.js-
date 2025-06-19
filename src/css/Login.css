@@ -1,0 +1,157 @@
+.formContainer {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.backgroundVideoRegister {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="text"] {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+.form button {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.form button:disabled {
+  background-color: #a2a2a2;
+  cursor: not-allowed;
+}
+
+.form button:hover:not(:disabled) {
+  background-color: #2c387e;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+p a {
+  color: #3f51b5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+  .formContainer {
+    margin: 250px auto; 
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 95%;
+    box-sizing: border-box;
+  }
+
+  .backgroundVideoRegister {
+    object-fit: cover;
+  }
+
+  .formTitle {
+    font-size: 22px;
+  }
+
+  .form input[type="email"],
+  .form input[type="password"],
+  .form input[type="text"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .form button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
