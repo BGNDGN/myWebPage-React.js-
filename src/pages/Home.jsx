@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import '../css/Home.css';
 import burakImage from '../assets/burak-profile.webp';
 import Logos from '../logo/Logo';
-import backgroundVideo from '../assets/12121108_3840_2160_30fps.mp4';
 import register from '../assets/austin-distel-744oGeqpxPQ-unsplash.webp';
 import login from '../assets/desola-lanre-ologun-zYgV-NGZtlA-unsplash.webp';
 import homepage from '../assets/undraw_fingerprint-login_19qv.webp';

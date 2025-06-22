@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, clearLoginState } from '../redux/slices/loginSlice';
 import { useNavigate, Link } from 'react-router-dom';
-import backgroundVideoRegister from '../assets/20004535-uhd_2560_1440_30fps.mp4';
 
 function Login() {
   const dispatch = useDispatch();

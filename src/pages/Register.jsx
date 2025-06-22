@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { registerUser, clearRegisterState } from '../redux/slices/registerSlice';
 import '../css/Register.css';
 import signUpImage from '../assets/undraw_fingerprint-login_19qv.webp';
-import backgroundVideoRegister from '../assets/13523849_2160_3840_100fps.mp4';
 
 function Register() {
   const dispatch = useDispatch();

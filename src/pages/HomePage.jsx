@@ -5,7 +5,6 @@ import FSDI from '../components/FSDI.jsx';
 import UsingTechnologies from '../components/UsingTechnologies.jsx'
 import Logos from '../logo/Logo';
 import burakImage from '../assets/burak-profile.webp';
-import matrix from '../assets/3129671-uhd_3840_2160_30fps.mp4';
 import { useState } from 'react';
 import { useCallback } from 'react';
 import { Link } from 'react-router-dom';
