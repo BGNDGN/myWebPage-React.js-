@@ -27,7 +27,8 @@
     "server": "cd server && nodemon server.js",
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "jest"
+    "test": "jest",
+    "vercel-build": "npm install --legacy-peer-deps && npm run build",
   },
   "eslintConfig": {
     "extends": [
