@@ -36,7 +36,7 @@ function Login() {
     <div className="formContainer">
 
       <video autoPlay loop muted className="backgroundVideoRegister" playsInline preload="auto">
-        <source src={backgroundVideoRegister} type="video/mp4" />
+        <source src="/videos/20004535-uhd_2560_1440_30fps.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
       </video>
 

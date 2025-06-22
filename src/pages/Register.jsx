@@ -40,7 +40,7 @@ function Register() {
   return (
     <div>
       <video autoPlay loop muted className="backgroundVideoRegister" playsInline preload="auto">
-        <source src={backgroundVideoRegister} type="video/mp4" />
+        <source src="/videos/13523849_2160_3840_100fps.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
       </video>
       <h2 className="registerTitle">Kayıt Sayfası</h2>

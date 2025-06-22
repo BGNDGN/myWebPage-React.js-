@@ -13,7 +13,7 @@ function Home () {
   return (
     <div className="homeContainer">
       <video autoPlay loop muted className="backgroundVideo" playsInline preload="auto">
-        <source src={backgroundVideo} type="video/mp4" />
+        <source src="/videos/12121108_3840_2160_30fps.mp4" type="video/mp4" />
         Tarayıcınız video etiketini desteklemiyor.
       </video>
 
