@@ -28,7 +28,7 @@
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "jest",
-    "vercel-build": "npm install --legacy-peer-deps && npm run build",
+    "vercel-build": "npm install --legacy-peer-deps && npm run build"
   },
   "eslintConfig": {
     "extends": [
