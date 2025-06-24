@@ -1,3 +1,2 @@
-const baseURL = 'https://my-web-page-bv1r.vercel.app/api'; 
-
+const baseURL = 'https://my-web-page-bv1r.vercel.app';
 export default baseURL;
