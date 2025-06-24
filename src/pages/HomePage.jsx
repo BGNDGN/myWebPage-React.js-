@@ -28,7 +28,7 @@ function HomePage () {
             `}</style>
 
             <video autoPlay loop muted className="backgroundVideo" playsInline preload="auto">
-                <source src="/videos/3129671-uhd_3840_2160_30fps.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776287/3129671-uhd_3840_2160_30fps_hzqcf0.mp4" type="video/mp4" />
                 Tarayıcınız video etiketini desteklemiyor.
             </video>
 
