@@ -28,6 +28,7 @@
     "server": "cd server && nodemon server.js",
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "react-scripts build",
     "test": "jest",
     "vercel-build": "npm install --legacy-peer-deps && npm run build"
   },
