@@ -1,11 +1,7 @@
 {
-  "buildCommand": "npm install --legacy-peer-deps && npm run build",
-  "outputDirectory": "build",
   "functions": {
     "api/index.js": {
-      "runtime": "nodejs18.x",
-      "memory": 1024,
-      "maxDuration": 10
+      "runtime": "nodejs18.x"
     }
   },
   "routes": [
