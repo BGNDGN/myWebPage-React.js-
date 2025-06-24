@@ -12,8 +12,7 @@ const app = express();
 connectDB().catch(console.error);
 
 app.use(express.json());
-
-app.use('/api', authRoutes); 
+app.use('/api', authRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'API çalışıyor!' });
