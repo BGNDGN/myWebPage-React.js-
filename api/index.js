@@ -2,14 +2,16 @@ const express = require('express');
 const serverless = require('serverless-http');
 const path = require('path');
 
-require('dotenv').config({ path: path.resolve(__dirname, '../../server/.env') });
+require('dotenv').config({ path: path.resolve(__dirname, '../server/.env') });
 
-const connectDB = require('../../server/config/mongodbConnect');
-const authRoutes = require('../../server/routes/authRoutes');
+const connectDB = require('../server/config/mongodbConnect');
+const authRoutes = require('../server/routes/authRoutes');
 
 const app = express();
 
 connectDB().catch(console.error);
+
+console.log("Express backend başlatıldı");
 
 app.use(express.json());
 app.use('/api', authRoutes);
