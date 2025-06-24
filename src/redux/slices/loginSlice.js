@@ -18,7 +18,7 @@ const loginSlice = createSlice({
   name: 'login',
   initialState: { user: null, loading: false, error: null, success: false },
   reducers: {
-    clearLoginState: (state) => {
+    clearLoginState: (stateg) => {
       state.loading = false;
       state.error = null;
       state.success = false;

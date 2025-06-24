@@ -14,9 +14,9 @@ connectDB().catch(console.error);
 console.log("Express backend başlatıldı");
 
 app.use(express.json());
-app.use('/api', authRoutes);
+app.use(authRoutes); 
 
-app.get('/api/health', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({ status: 'API çalışıyor!' });
 });
 
