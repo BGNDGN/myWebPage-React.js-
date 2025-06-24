@@ -47,6 +47,8 @@ exports.loginUser = async (req, res) => {
 };
 
 exports.registerUser = async (req, res) => {
+  console.log('Register endpoint hit');
+
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
