@@ -1,18 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import baseURL from '../api/baseURL'; 
 
 export const registerUser = createAsyncThunk(
   'register/registerUser',
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('/api/register', userData); 
+      const response = await axios.post(`${baseURL}/api/register`, userData);
       return response.data;
     } catch (error) {
       const message =
-        error.response?.data?.message ||  
-        error.response?.data ||          
-        error.message ||                 
-        'Bir hata oluştu';                
+        error.response?.data?.message ||
+        error.response?.data ||
+        error.message ||
+        'Bir hata oluştu';
       return rejectWithValue(message);
     }
   }
@@ -20,12 +21,7 @@ export const registerUser = createAsyncThunk(
 
 const registerSlice = createSlice({
   name: 'register',
-  initialState: {
-    user: null,
-    loading: false,
-    error: null,
-    success: false,
-  },
+  initialState: { user: null, loading: false, error: null, success: false },
   reducers: {
     clearRegisterState: (state) => {
       state.loading = false;
