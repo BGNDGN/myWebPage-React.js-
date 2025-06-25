@@ -49,6 +49,10 @@
   box-sizing: border-box;
 }
 
+.homeFirstDiv title {
+  padding: 5px;
+}
+
 .homeSecondDiv {
   flex: 1;
   background-color: #ffffff;
