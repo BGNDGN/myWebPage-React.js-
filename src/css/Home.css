@@ -214,4 +214,8 @@ a:hover {
     padding: 16px;
     box-sizing: border-box;
   }
+
+  .homeFirstDiv title {
+    padding: 10px;
+}
 }
