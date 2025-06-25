@@ -215,4 +215,16 @@ a:hover {
     padding: 15px;
     box-sizing: border-box;
   }
+
+  .routerToHomePage {
+    display: block !important; 
+    text-align: center;
+    height: auto !important;
+    padding: 20px;
+  }
+
+  .routerToHomePage a {
+    display: block; 
+    margin-top: 10px;
+  }
 }
