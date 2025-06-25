@@ -246,17 +246,26 @@ h2, h3, h4, h5 {
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #1f2937;
+    z-index: 100;
   }
 
   .navbarZones {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    width: 100%;
+    overflow-x: auto;
   }
 
   .navbarZones a {
     margin-left: 0;
     margin-right: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .aboutZone,
@@ -323,6 +332,10 @@ h2, h3, h4, h5 {
   .aboutZone:hover, .experienceZone:hover, .usingTechnologiesZone:hover, .contactMeZone:hover, .socialMediasZone:hover {
   transition: 0.2s;
   width: 675px;
+}
+
+ .aboutZone:hover, .experienceZone:hover, .usingTechnologiesZone:hover, .contactMeZone:hover, .socialMediasZone:hover {
+  width: 1000px;
 }
 }
 
