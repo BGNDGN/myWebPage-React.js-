@@ -1,2 +1,2 @@
-const app = require('./index.js');  // mevcut express app'i import ediyoruz
+const app = require('./index.js');  
 module.exports = app;

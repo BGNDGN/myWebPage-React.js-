@@ -3,15 +3,14 @@ const serverless = require('serverless-http');
 const path = require('path');
 const app = express();
 
-require('dotenv').config({ path: path.resolve(__dirname, '../server/.env') });
+require('dotenv').config({ path: path.resolve(__dirname, './.env') }); 
 
-const connectDB = require('../server/config/mongodbConnect');
-const authRoutes = require('../server/routes/authRoutes');
+const connectDB = require('./config/mongodbConnect');
+const authRoutes = require('./routes/authRoutes'); 
 
 connectDB().catch(console.error);
 
 app.use(express.json());
-
 app.use('/api', authRoutes);
 
 app.get('/api/health', (req, res) => {
