@@ -205,6 +205,7 @@ a:hover {
     max-width: 100%;
     padding: 16px 16px 16px 16px; 
     box-sizing: border-box;
+    font-size: 10px;
   }
 
   .homeSecondDiv {
@@ -214,8 +215,4 @@ a:hover {
     padding: 16px;
     box-sizing: border-box;
   }
-
-  .homeFirstDiv title {
-    padding: 10px;
-}
 }
