@@ -9,6 +9,9 @@ import { useState } from 'react';
 import { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/HomePage.css';
+import baseURL from '../../api/baseURL';
+
+console.log(baseURL);
 
 function HomePage () {
     const [email, setEmail] = useState('');

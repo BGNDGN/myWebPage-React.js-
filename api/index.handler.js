@@ -1,9 +1,9 @@
-// api/index.js
+// api/index.handler.js
 const express = require('express');
 const serverless = require('serverless-http');
 const path = require('path');
-const app = express();
 
+const app = express();
 require('dotenv').config({ path: path.resolve(__dirname, './.env') });
 
 const connectDB = require('./config/mongodbConnect');
@@ -14,7 +14,7 @@ connectDB().catch(console.error);
 app.use(express.json());
 app.use('/api', authRoutes);
 
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
   res.json({ status: 'API çalışıyor!' });
 });
 
