@@ -10,24 +10,18 @@
 /* Sayfa container */
 .homeContainer {
   position: relative;
-  width: 100%;
+  z-index: 0;
   min-height: 100vh;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  background-color: #000; /* Video yüklenmezse siyah arka plan */
 }
 
 /* Arka plan video */
 .backgroundVideo {
-  position: fixed; /* Sabit arka planda */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* Videoyu kapsa da bozulmasın */
-  z-index: -1; /* İçeriğin arkasında */
-  filter: brightness(0.6); /* Video biraz karartılır, yazılar okunur */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Video arka planda */
 }
 
 /* Video yüklenene kadar gösterilen loading */
@@ -44,13 +38,7 @@
 /* Ana içerik: üstte ve responsive */
 .homeMainDiv {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  z-index: 1;
+  z-index: 1; /* İçerik video üstünde */
 }
 
 /* İlk bölüm: profil ve sosyal medya */

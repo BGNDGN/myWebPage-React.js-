@@ -15,21 +15,32 @@ export default function Home() {
 
   return (
     <div className="homeContainer">
-      <video
-        className="backgroundVideo"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        onLoadedData={() => setVideoLoaded(true)}
-      >
-        <source
-          src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776340/12121108_3840_2160_30fps_snlkju.mp4"
-          type="video/mp4"
-        />
-        Tarayıcınız video etiketini desteklemiyor.
-      </video>
+    {!videoLoaded && (
+      <div className="loadingPlaceholder">Yükleniyor...</div>
+    )}
+
+    {videoLoaded && (
+      <main className="homeMainDiv">
+        {/* ... içerik burada ... */}
+      </main>
+    )}
+
+    {/* Video en sonda, DOM'da en altta */}
+    <video
+      className="backgroundVideo"
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      onLoadedData={() => setVideoLoaded(true)}
+    >
+      <source
+        src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776340/12121108_3840_2160_30fps_snlkju.mp4"
+        type="video/mp4"
+      />
+      Tarayıcınız video etiketini desteklemiyor.
+    </video>
 
       {!videoLoaded && (
         <div className="loadingPlaceholder">Yükleniyor...</div>
