@@ -37,6 +37,7 @@
 
 
 .homeFirstDiv {
+  min-height: 500px;
   flex: 0 0 750px; 
   background-color: #ffffff;
   padding: 20px;
