@@ -222,7 +222,7 @@ a:hover {
     padding: 20px;
   }
 
-  .routerToHomePage a {
+  .routerToHomePage a, .routerToLoginPage a, .routerToRegisterPage a{
     display: block; 
     margin-top: 10px;
   }
@@ -233,10 +233,6 @@ a:hover {
     align-items: center;
     text-align: center;
     padding: 5px;
-    font-size: 15px;
-  }
-
-  .routerToHomePageStrong {
-    margin-top: -10px;
+    font-size: 17px;
   }
 }
