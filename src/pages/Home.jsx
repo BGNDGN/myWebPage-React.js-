@@ -11,10 +11,10 @@ import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 function Home () {
   return (
     <div className="homeContainer">
-      <video autoPlay loop muted className="backgroundVideo" playsInline preload="auto">
+      {/*<video autoPlay loop muted className="backgroundVideo" playsInline preload="auto">
         <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776340/12121108_3840_2160_30fps_snlkju.mp4" type="video/mp4" />
         Tarayıcınız video etiketini desteklemiyor.
-      </video>
+      </video>*/}
 
       <div className='homeMainDiv'>
         <div className='homeFirstDiv'>
