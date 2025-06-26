@@ -9,6 +9,10 @@ import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 
 
 function Home () {
+    useEffect(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, []);
+
   return (
     <div className="homeContainer">
       <video autoPlay loop muted className="backgroundVideo" playsInline preload="auto">
