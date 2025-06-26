@@ -31,9 +31,9 @@ function Home () {
 
         <div className='homeSecondDiv'>
           <p className="blog">BLOG SAYFAM</p>
-          <p className='routerToHomePage' style={{ backgroundImage: `url(${homepage})` }}>Anasayfaya girmek için <br /><Link to="/homepage"><strong className='routerToHomePageStrong'>tıklayınız !</strong></Link></p>
-          <p className='routerToLoginPage' style={{ backgroundImage: `url(${register})` }}>Kaydolmak için <br /><Link to="/register"> <strong className='routerToHomeLoginStrong'>tıklayınız !</strong></Link></p>
-          <p className='routerToRegisterPage' style={{ backgroundImage: `url(${login})` }}>Giriş yapmak için <br /><Link to="/login"> <strong className='routerToHomeRegisterStrong'>tıklayınız !</strong></Link></p>
+          <p className='routerToHomePage' style={{ backgroundImage: `url(${homepage})` }}>Anasayfaya girmek için&nbsp;<Link to="/homepage"><strong className='routerToHomePageStrong'>tıklayınız !</strong></Link></p>
+          <p className='routerToLoginPage' style={{ backgroundImage: `url(${register})` }}>Kaydolmak için&nbsp;<Link to="/register"> <strong className='routerToHomeLoginStrong'>tıklayınız !</strong></Link></p>
+          <p className='routerToRegisterPage' style={{ backgroundImage: `url(${login})` }}>Giriş yapmak için&nbsp;<Link to="/login"> <strong className='routerToHomeRegisterStrong'>tıklayınız !</strong></Link></p>
         </div>
       </div>
     </div>
