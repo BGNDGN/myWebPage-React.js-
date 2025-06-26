@@ -233,6 +233,10 @@ a:hover {
     align-items: center;
     text-align: center;
     padding: 5px;
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .routerToHomePageStrong {
+    margin-top: -3px;
   }
 }
