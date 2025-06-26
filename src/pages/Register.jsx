@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef  } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUser, clearRegisterState } from '../redux/slices/registerSlice';
@@ -36,26 +36,12 @@ function Register() {
     dispatch(registerUser(formData));
   };
 
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = true;  
-      const playPromise = videoRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log('Video otomatik oynatma engellendi.', error);
-        });
-      }
-    }
-  }, []);
-
   return (
     <div>
-      <video ref={videoRef} muted autoPlay playsInline loop preload="auto" className="backgroundVideoRegister">
-        <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776326/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4" />
-          Tarayıcınız video etiketini desteklemiyor.
+      <video className="backgroundVideoRegister" playsInline muted autoPlay loop>
+        <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776326/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4"/>
       </video>
+      
       <h2 className="registerTitle">Kayıt Sayfası</h2>
       <div className="RegisterMain">
         <form className="registerZone" onSubmit={handleSubmit}>
