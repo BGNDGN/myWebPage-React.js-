@@ -55,6 +55,8 @@ function About() {
                 </ul>
             <p>Bu dilleri online eğitimlerle ve okulda edindiğim bilgilerle öğrendim ve </p>
             <p>kendimi geliştirdim.</p>
+
+            <hr/>
         </div>
     );
 }

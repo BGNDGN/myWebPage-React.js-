@@ -38,12 +38,12 @@ function HomePage () {
                 </div>
 
                 <div className="navbarZones">
-                    <Link to="/">Giriş Sayfası</Link>
                     <a href="#about">Hakkımda</a>
                     <a href="#experience">İş Deneyimlerim</a>
                     <a href="#skills">Kullandığım Teknolojiler</a>
                     <a href="#socials">Sosyal Medyalarım</a>
                     <a href="#contact">Benimle İletişime Geç</a>
+                    <Link to="/">Giriş Sayfasına Geri Dön</Link>
                 </div>
             </div>
             
@@ -55,7 +55,6 @@ function HomePage () {
                 <div className="aboutZoneText">
                     <About />
                 </div>
-                <hr></hr>
             </div>
 
             <div id="experience" className="experienceZone">
