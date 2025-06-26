@@ -70,8 +70,8 @@ function HomePage() {
           <label>E-mail: <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-posta adresiniz" className={styles.mailInput} /></label>
         </div>
 
-        <div>
-          <label>Konu: <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu başlığı" className={styles.subjectInput} /></label>
+        <div className={styles.subjectDiv}>
+          <label />Konu:<textarea type="text" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu başlığı" maxLength={405} className={styles.subjectInput} />
         </div>
 
         <div>

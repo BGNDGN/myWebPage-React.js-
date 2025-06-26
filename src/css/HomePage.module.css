@@ -54,12 +54,31 @@ body {
   font-size: 1rem;
 }
 
+.subjectDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+  margin-bottom: 20px;
+}
+
+.subjectLabel {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
 .subjectInput {
-  height: 250px;
-  text-align: left;       
-  padding: 8px;      
-  line-height: 1.4;       
-  box-sizing: border-box; 
+  height: 136px;
+  width: 75%;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  border: 1.5px solid #bbb;
+  border-radius: 8px;
+  resize: vertical;
+  box-sizing: border-box;
+  resize: none;
 }
 
 .contactMeButton {
