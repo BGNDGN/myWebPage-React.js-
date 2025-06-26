@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 import '../css/Home.css';
 import burakImage from '../assets/burak-profile.webp';
 import Logos from '../logo/Logo';
@@ -10,9 +9,6 @@ import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 
 
 function Home () {
-    useEffect(() => {
-    window.dispatchEvent(new Event('resize'));
-  }, []);
 
   return (
     <div className="homeContainer">
