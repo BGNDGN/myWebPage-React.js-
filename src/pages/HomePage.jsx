@@ -17,26 +17,6 @@ function HomePage() {
     window.open(gmailURL, "_blank");
   }, [email, subject]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    setTimeout(() => {
-      window.dispatchEvent(new Event("resize"));
-    }, 100);
-
-    const video = document.querySelector(".backgroundVideo");
-    const handleLoaded = () => {
-      setTimeout(() => {
-        window.dispatchEvent(new Event("resize"));
-      }, 100);
-    };
-    video?.addEventListener("loadeddata", handleLoaded);
-
-    return () => {
-      video?.removeEventListener("loadeddata", handleLoaded);
-      window.scrollTo(0, 0);
-    };
-  }, []);
-
   return (
     <div>
       <style>{`html { scroll-behavior: smooth; }`}</style>
