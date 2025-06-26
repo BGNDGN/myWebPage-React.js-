@@ -22,6 +22,7 @@
 }
 
 .homeMainDiv {
+  display: block;
   position: relative;
   z-index: 1;
   display: flex;
@@ -37,7 +38,7 @@
 
 
 .homeFirstDiv {
-  min-height: 500px;
+  height: 500px;
   flex: 0 0 750px; 
   background-color: #ffffff;
   padding: 20px;
