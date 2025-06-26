@@ -75,11 +75,9 @@ function Register() {
               required
             />
           </label>
-          <button type="submit" disabled={loading}>
-            {loading ? 'Kaydoluyor...' : 'Kaydol'}
-          </button>
+          <button type="submit" disabled={loading}>{loading ? 'Kaydoluyor...' : 'Kaydol'}</button>
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          <p>Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}<Link to="/homepage">tıklayınız !</Link></p>
+          <p className="ifUWantToRegister">Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}<Link to="/homepage">tıklayınız !</Link></p>
         </form>
 
         <div className="verticalDivider"></div>
