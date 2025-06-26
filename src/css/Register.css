@@ -19,8 +19,10 @@
 }
 
 .RegisterMain {
+  position: relative;  
+  z-index: 1;          
   display: grid;
-  grid-template-columns: 2fr 1px 2fr; 
+  grid-template-columns: 2fr 1px 2fr;
   gap: 60px;
   align-items: center;
   padding: 60px 80px;
@@ -137,7 +139,7 @@
     margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
-    margin-left: 40px;
+    margin-left: 0px;
   }
 
   .RegisterMain {
