@@ -7,7 +7,9 @@
   padding: 0;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f5f7fa;
@@ -22,6 +24,7 @@ html, body, #root {
   background-color: transparent;
 }
 
+/* Video - tam ekran, en arkada */
 .backgroundVideo {
   position: fixed;
   top: 0;
@@ -29,21 +32,31 @@ html, body, #root {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   user-select: none;
 }
 
+/* Yükleniyor mesajı, videodan üstte */
 .loadingPlaceholder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
+  background-color: #00000099;
+  color: white;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  color: #666;
+  z-index: 10;
 }
 
+/* İçerik ana container - videodan kesin üstte */
 .homeMainDiv {
+  position: relative;
+  z-index: 10;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -52,6 +65,14 @@ html, body, #root {
   min-height: 100vh;
   align-items: stretch;
   box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.homeMainDiv.hidden {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 .homeFirstDiv {
@@ -59,7 +80,7 @@ html, body, #root {
   background-color: #fff;
   border-radius: 12px;
   padding: 25px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -110,7 +131,7 @@ html, body, #root {
   background-color: #fff;
   border-radius: 12px;
   padding: 25px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -158,10 +179,10 @@ html, body, #root {
 .routerToHomePage::before,
 .routerToLoginPage::before,
 .routerToRegisterPage::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   z-index: 1;
 }

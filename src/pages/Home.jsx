@@ -16,12 +16,12 @@ export default function Home() {
   return (
     <div className="homeContainer">
       <video
+        className="backgroundVideo"
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
-        className="backgroundVideo"
         onLoadedData={() => setVideoLoaded(true)}
       >
         <source
@@ -31,59 +31,64 @@ export default function Home() {
         Tarayıcınız video etiketini desteklemiyor.
       </video>
 
-      {!videoLoaded && (
-        <div className="loadingPlaceholder">Yükleniyor...</div>
-      )}
+      {!videoLoaded && <div className="loadingPlaceholder">Yükleniyor...</div>}
 
-      {videoLoaded && (
-        <main className="homeMainDiv">
-          <section className="homeFirstDiv">
-            <div className="photograph">
-              <img src={burakImage} alt="Burak Gündoğan" className="burakImage" loading="lazy" />
-            </div>
-            <div className="nameSurname"><p>Burak Gündoğan</p></div>
-            <div className="title"><p>Jr.Frontend/Full-Stack/Backend Developer</p></div>
-            <div className="socialMedias">
-              <p>Sosyal Medya Hesaplarım ve Github Hesabım</p>
-              <Logos />
-            </div>
-            <div className="copyright">
-              <p>Copyright © 2025 - Tüm Hakları Saklıdır.</p>
-            </div>
-          </section>
+      <main className={`homeMainDiv ${videoLoaded ? 'visible' : 'hidden'}`}>
+        <section className="homeFirstDiv">
+          <div className="photograph">
+            <img
+              src={burakImage}
+              alt="Burak Gündoğan"
+              className="burakImage"
+              loading="lazy"
+            />
+          </div>
+          <div className="nameSurname">
+            <p>Burak Gündoğan</p>
+          </div>
+          <div className="title">
+            <p>Jr.Frontend/Full-Stack/Backend Developer</p>
+          </div>
+          <div className="socialMedias">
+            <p>Sosyal Medya Hesaplarım ve Github Hesabım</p>
+            <Logos />
+          </div>
+          <div className="copyright">
+            <p>Copyright © 2025 - Tüm Hakları Saklıdır.</p>
+          </div>
+        </section>
 
-          <section className="homeSecondDiv">
-            <p className="blog">BLOG SAYFAM</p>
-            <p
-              className="routerToHomePage"
-              style={{ backgroundImage: `url(${homepage})` }}
-            >
-              Anasayfaya girmek için <br />
-              <Link to="/homepage">
-                <strong className="routerToHomePageStrong">tıklayınız !</strong>
-              </Link>
-            </p>
-            <p
-              className="routerToLoginPage"
-              style={{ backgroundImage: `url(${register})` }}
-            >
-              Kaydolmak için <br />
-              <Link to="/register">
-                <strong className="routerToHomeLoginStrong">tıklayınız !</strong>
-              </Link>
-            </p>
-            <p
-              className="routerToRegisterPage"
-              style={{ backgroundImage: `url(${login})` }}
-            >
-              Giriş yapmak için <br />
-              <Link to="/login">
-                <strong className="routerToHomeRegisterStrong">tıklayınız !</strong>
-              </Link>
-            </p>
-          </section>
-        </main>
-      )}
+        <section className="homeSecondDiv">
+          <p className="blog">BLOG SAYFAM</p>
+          <p
+            className="routerToHomePage"
+            style={{ backgroundImage: `url(${homepage})` }}
+          >
+            Anasayfaya girmek için <br />
+            <Link to="/homepage">
+              <strong className="routerToHomePageStrong">tıklayınız !</strong>
+            </Link>
+          </p>
+          <p
+            className="routerToLoginPage"
+            style={{ backgroundImage: `url(${register})` }}
+          >
+            Kaydolmak için <br />
+            <Link to="/register">
+              <strong className="routerToHomeLoginStrong">tıklayınız !</strong>
+            </Link>
+          </p>
+          <p
+            className="routerToRegisterPage"
+            style={{ backgroundImage: `url(${login})` }}
+          >
+            Giriş yapmak için <br />
+            <Link to="/login">
+              <strong className="routerToHomeRegisterStrong">tıklayınız !</strong>
+            </Link>
+          </p>
+        </section>
+      </main>
     </div>
   );
 }
