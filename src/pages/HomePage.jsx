@@ -47,6 +47,7 @@ function HomePage() {
       <div id="about" className="aboutZone">
         <h2>Hakkımda</h2>
         <hr />
+        <hr></hr>
         <img src={burakImage} className="burakImage" alt="Burak Gündoğan" loading="lazy" />
         <div className="aboutZoneText">
           <About />
