@@ -35,7 +35,6 @@
   box-sizing: border-box;
 }
 
-
 .homeFirstDiv {
   flex: 0 0 750px; 
   background-color: #ffffff;
@@ -48,7 +47,8 @@
   box-sizing: border-box;
 }
 
-.homeFirstDiv title {
+/* Eğer .title class'ı varsa ona padding ver */
+.title {
   padding: 5px;
 }
 
@@ -178,8 +178,6 @@ a:hover {
   transition: 0.2s;
 }
 
-
-
 @media (max-width: 768px) {
   .homeContainer {
     height: auto;
@@ -193,26 +191,19 @@ a:hover {
     height: auto;
     min-height: 100vh;
     overflow-y: auto;
-    align-items: center;
+    align-items: flex-start;  /* Burada center'dan flex-start yaptım */
     gap: 30px;
     padding: 20px 10px;
   }
 
-  .homeFirstDiv {
-    flex: none; 
-    width: 95%;
-    max-width: 100%;
-    padding: 16px 16px 16px 16px; 
-    box-sizing: border-box;
-    font-size: 15px;
-  }
-
+  .homeFirstDiv,
   .homeSecondDiv {
     flex: none; 
     width: 95%;
     max-width: 100%;
-    padding: 15px;
+    padding: 20px 20px; /* Sağ-sol padding artırıldı */
     box-sizing: border-box;
+    font-size: 15px;
   }
 
   .routerToHomePage {
@@ -225,5 +216,19 @@ a:hover {
   .routerToHomePage a {
     display: block; 
     margin-top: 10px;
+  }
+
+  .title {
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .nameSurname,
+  .title,
+  .socialMedias,
+  .copyright {
+    height: auto;  /* Sabit yükseklik kaldırıldı */
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
