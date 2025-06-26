@@ -9,7 +9,6 @@ const HomePage = lazy(() => import('./pages/HomePage.jsx'));
 function App() {
   return (
     <>
-      <ScrollToTop />
       <Suspense fallback={<div>Yükleniyor...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
