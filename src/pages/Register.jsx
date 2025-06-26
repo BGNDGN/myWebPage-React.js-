@@ -40,6 +40,7 @@ function Register() {
 
   useEffect(() => {
     if (videoRef.current) {
+      videoRef.current.muted = true;  
       const playPromise = videoRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch(error => {
@@ -51,7 +52,7 @@ function Register() {
 
   return (
     <div>
-      <video autoPlay loop muted className="backgroundVideoRegister" playsInline preload="auto" ref={videoRef}>
+      <video ref={videoRef} muted autoPlay playsInline loop preload="auto" className="backgroundVideoRegister">
         <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776326/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
       </video>
