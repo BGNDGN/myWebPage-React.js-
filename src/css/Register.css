@@ -6,6 +6,7 @@
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+  pointer-events: none;
 }
 
 .registerTitle {
@@ -94,8 +95,9 @@
 }
 
 .ifUWantToRegister {
-  width: 100%;
+  width: 83%;
   text-align: center;
+  margin: 0 0 0 auto;
 }
 
 .pHomePage {
@@ -182,6 +184,11 @@
     width: 100%;
     font-size: 16px;
     padding: 12px;
+  }
+
+  .ifUWantToRegister {
+    width: 100%;
+    text-align: center;
   }
 
   .pHomePage {
