@@ -7,7 +7,8 @@ import register from '../assets/austin-distel-744oGeqpxPQ-unsplash.webp';
 import login from '../assets/desola-lanre-ologun-zYgV-NGZtlA-unsplash.webp';
 import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 
-function Home() {
+
+function Home () {
   return (
     <div className="homeContainer">
       <video autoPlay loop muted className="backgroundVideo" playsInline preload="auto">
@@ -18,22 +19,21 @@ function Home() {
       <div className='homeMainDiv'>
         <div className='homeFirstDiv'>
           <div className="photograph">
-            <img src={burakImage} className="burakImage" alt="Burak G\u00fcndo\u011fan" loading="lazy" />
+            <img src={burakImage} className="burakImage" alt="Burak Gündoğan" loading="lazy" />
           </div>
-          <div className="nameSurname"><p>Burak G\u00fcndo\u011fan</p></div>
+          <div className="nameSurname"><p>Burak Gündoğan</p></div>
           <div className="title"><p>Jr.Frontend/Full-Stack/Backend Developer</p></div>
-          <div className="socialMedias">
-            <p>Sosyal Medya Hesaplar\u0131m ve Github Hesab\u0131m</p>
+          <div className="socialMedias"><p>Sosyal Medya Hesaplarım ve Github Hesabım</p>
             <Logos />
           </div>
-          <div className="copyright"><p>Copyright \u00a9 2025 - T\u00fcm Haklar\u0131 Sakl\u0131d\u0131r.</p></div>
+          <div className="copyright"><p>Copyright © 2025 - Tüm Hakları Saklıdır.</p></div>
         </div>
 
         <div className='homeSecondDiv'>
           <p className="blog">BLOG SAYFAM</p>
-          <p className='routerToHomePage' style={{ backgroundImage: `url(${homepage})` }}>Anasayfaya girmek i\u00e7in&nbsp;<Link to="/homepage"><strong className='routerToHomePageStrong'>t\u0131klay\u0131n\u0131z !</strong></Link></p>
-          <p className='routerToLoginPage' style={{ backgroundImage: `url(${register})` }}>Kaydolmak i\u00e7in&nbsp;<Link to="/register"> <strong className='routerToHomeLoginStrong'>t\u0131klay\u0131n\u0131z !</strong></Link></p>
-          <p className='routerToRegisterPage' style={{ backgroundImage: `url(${login})` }}>Giri\u015f yapmak i\u00e7in&nbsp;<Link to="/login"> <strong className='routerToHomeRegisterStrong'>t\u0131klay\u0131n\u0131z !</strong></Link></p>
+          <p className='routerToHomePage' style={{ backgroundImage: `url(${homepage})` }}>Anasayfaya girmek için&nbsp;<Link to="/homepage"><strong className='routerToHomePageStrong'>tıklayınız !</strong></Link></p>
+          <p className='routerToLoginPage' style={{ backgroundImage: `url(${register})` }}>Kaydolmak için&nbsp;<Link to="/register"> <strong className='routerToHomeLoginStrong'>tıklayınız !</strong></Link></p>
+          <p className='routerToRegisterPage' style={{ backgroundImage: `url(${login})` }}>Giriş yapmak için&nbsp;<Link to="/login"> <strong className='routerToHomeRegisterStrong'>tıklayınız !</strong></Link></p>
         </div>
       </div>
     </div>
