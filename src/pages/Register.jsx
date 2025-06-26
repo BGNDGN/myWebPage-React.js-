@@ -39,9 +39,9 @@ function Register() {
   return (
     <div>
       <video className="backgroundVideoRegister" playsInline muted autoPlay loop>
-        <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776326/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4"/>
+        <source src="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_720,h_1280,fps_30/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4"/>
       </video>
-      
+
       <h2 className="registerTitle">Kayıt Sayfası</h2>
       <div className="RegisterMain">
         <form className="registerZone" onSubmit={handleSubmit}>
