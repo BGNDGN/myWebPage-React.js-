@@ -1,3 +1,4 @@
+/* Home.css */
 *,
 *::before,
 *::after {
@@ -7,7 +8,7 @@
 .homeContainer {
   position: relative;
   width: 100%;
-  min-height: 100vh;   
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -30,18 +31,17 @@
   align-items: flex-start;
   gap: 40px;
   padding: 20px;
-  min-height: 100vh; 
+  min-height: 100vh;
   font-family: sans-serif;
   box-sizing: border-box;
 }
 
-
 .homeFirstDiv {
-  flex: 0 0 750px; 
+  flex: 0 0 750px;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@
   background-color: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -67,9 +67,9 @@
 .burakImage {
   border-radius: 50%;
   width: 150px;
-  height: 150px; 
+  height: 150px;
   object-fit: cover;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .photograph {
@@ -128,13 +128,14 @@ a:hover {
   box-sizing: border-box;
 }
 
-.routerToHomePage, .routerToLoginPage, .routerToRegisterPage {
+.routerToHomePage,
+.routerToLoginPage,
+.routerToRegisterPage {
   position: relative;
   background-size: cover;
   background-position: center;
   height: 150px;
   width: 100%;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,12 +148,16 @@ a:hover {
   box-sizing: border-box;
 }
 
-.routerToHomePage:hover, .routerToLoginPage:hover, .routerToRegisterPage:hover {
+.routerToHomePage:hover,
+.routerToLoginPage:hover,
+.routerToRegisterPage:hover {
   height: 175px;
   transition: 0.2s;
 }
 
-.routerToHomePage::before, .routerToLoginPage::before, .routerToRegisterPage::before {
+.routerToHomePage::before,
+.routerToLoginPage::before,
+.routerToRegisterPage::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -161,31 +166,44 @@ a:hover {
   z-index: 1;
 }
 
-.routerToHomePage > *, .routerToLoginPage > *, .routerToRegisterPage > * {
+.routerToHomePage > *,
+.routerToLoginPage > *,
+.routerToRegisterPage > * {
   position: relative;
   z-index: 2;
 }
 
-.routerToHomePageStrong, .routerToHomeLoginStrong, .routerToHomeRegisterStrong {
+.routerToHomePageStrong,
+.routerToHomeLoginStrong,
+.routerToHomeRegisterStrong {
   color: greenyellow;
   text-decoration: none;
 }
 
-.routerToHomePageStrong:hover, .routerToHomeLoginStrong:hover, .routerToHomeRegisterStrong:hover {
+.routerToHomePageStrong:hover,
+.routerToHomeLoginStrong:hover,
+.routerToHomeRegisterStrong:hover {
   color: rgb(84, 139, 0);
   text-decoration: underline;
   text-decoration-color: rgb(84, 139, 0);
   transition: 0.2s;
 }
 
-
-
 @media (max-width: 768px) {
   .homeContainer {
-    height: auto;
     min-height: 100vh;
     overflow-y: auto;
     margin-bottom: 10px;
+  }
+
+  .backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
   }
 
   .homeMainDiv {
@@ -199,35 +217,42 @@ a:hover {
   }
 
   .homeFirstDiv {
-    flex: none; 
+    flex: none;
     width: 95%;
     max-width: 100%;
-    padding: 16px 16px 16px 16px; 
+    padding: 16px;
     box-sizing: border-box;
     font-size: 15px;
   }
 
   .homeSecondDiv {
-    flex: none; 
+    flex: none;
     width: 95%;
     max-width: 100%;
     padding: 15px;
     box-sizing: border-box;
   }
 
-  .routerToHomePage, .routerToLoginPage, .routerToRegisterPage {
-    display: block !important; 
+  .routerToHomePage,
+  .routerToLoginPage,
+  .routerToRegisterPage {
+    display: block !important;
     text-align: center;
     height: auto !important;
     padding: 20px;
   }
 
-  .routerToHomePage a, .routerToLoginPage a, .routerToRegisterPage a{
-    display: block; 
+  .routerToHomePage a,
+  .routerToLoginPage a,
+  .routerToRegisterPage a {
+    display: block;
     margin-top: 10px;
   }
 
-  .nameSurname, .title, .socialMedias, .copyright {
+  .nameSurname,
+  .title,
+  .socialMedias,
+  .copyright {
     display: flex;
     justify-content: center;
     align-items: center;

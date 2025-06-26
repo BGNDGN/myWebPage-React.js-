@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import About from '../components/About.jsx';
 import SSS from '../components/SSS.jsx';
 import FSDI from '../components/FSDI.jsx';
@@ -35,26 +35,26 @@ function HomePage() {
         </div>
 
         <div className="navbarZones">
-          <a href="#about">Hakkımda</a>
-          <a href="#experience">İş Deneyimlerim</a>
-          <a href="#skills">Kullandığım Teknolojiler</a>
-          <a href="#socials">Sosyal Medyalarım</a>
-          <a href="#contact">Benimle İletişime Geç</a>
-          <Link to="/">Giriş Sayfasına Geri Dön</Link>
+          <a href="#about">Hakk\u0131mda</a>
+          <a href="#experience">\u0130\u015f Deneyimlerim</a>
+          <a href="#skills">Kulland\u0131\u011f\u0131m Teknolojiler</a>
+          <a href="#socials">Sosyal Medyalar\u0131m</a>
+          <a href="#contact">Benimle \u0130leti\u015fime Ge\u00e7</a>
+          <Link to="/">Giri\u015f Sayfas\u0131na Geri D\u00f6n</Link>
         </div>
       </div>
 
       <div id="about" className="aboutZone">
-        <h2>Hakkımda</h2>
+        <h2>Hakk\u0131mda</h2>
         <hr />
-        <img src={burakImage} className="burakImage" alt="Burak Gündoğan" loading="lazy" />
+        <img src={burakImage} className="burakImage" alt="Burak G\u00fcndo\u011fan" loading="lazy" />
         <div className="aboutZoneText">
           <About />
         </div>
       </div>
 
       <div id="experience" className="experienceZone">
-        <h2>İş Deneyimlerim</h2>
+        <h2>\u0130\u015f Deneyimlerim</h2>
         <hr />
         <SSS />
         <hr />
@@ -63,14 +63,14 @@ function HomePage() {
       </div>
 
       <div id="skills" className="usingTechnologiesZone">
-        <h2>Kullandığım Teknolojiler</h2>
+        <h2>Kulland\u0131\u011f\u0131m Teknolojiler</h2>
         <hr />
         <UsingTechnologies />
         <hr />
       </div>
 
       <div id="contact" className="contactMeZone">
-        <h2>Benimle İletişime Geçin</h2>
+        <h2>Benimle \u0130leti\u015fime Ge\u00e7in</h2>
         <hr />
         <div className="mailDiv">
           <label>
@@ -91,20 +91,20 @@ function HomePage() {
               type="text"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              placeholder="Konu başlığı"
+              placeholder="Konu ba\u015fl\u0131\u011f\u0131"
               className="subjectInput"
             />
           </label>
         </div>
         <div>
           <button className="contactMeButton" onClick={handleSendMail}>
-            Gönder
+            G\u00f6nder
           </button>
         </div>
       </div>
 
       <div id="socials" className="socialMediasZone">
-        <h2>Sosyal Medya Hesaplarım</h2>
+        <h2>Sosyal Medya Hesaplar\u0131m</h2>
         <hr />
         <Logos />
       </div>
