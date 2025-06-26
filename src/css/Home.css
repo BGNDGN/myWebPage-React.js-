@@ -215,7 +215,7 @@ a:hover {
     box-sizing: border-box;
   }
 
-  .routerToHomePage {
+  .routerToHomePage, .routerToLoginPage, .routerToRegisterPage {
     display: block !important; 
     text-align: center;
     height: auto !important;
@@ -227,7 +227,7 @@ a:hover {
     margin-top: 10px;
   }
 
-  .nameSurname, .title, .socialMedias {
+  .nameSurname, .title, .socialMedias, .copyright {
     display: flex;
     justify-content: center;
     align-items: center;
