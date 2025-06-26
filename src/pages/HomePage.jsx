@@ -55,6 +55,7 @@ function HomePage () {
                 <div className="aboutZoneText">
                     <About />
                 </div>
+                <hr></hr>
             </div>
 
             <div id="experience" className="experienceZone">

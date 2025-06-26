@@ -8,6 +8,8 @@ function About() {
             <hr />
 
             <p><strong>📌 Eğitim</strong></p>
+            <p>Plevne Anadolu Lisesinden mezun oldum.</p>
+            <p>Ardından Topkapı Üniversitesi'nde, Bilgisayar Programlama bölümünü kazandım ve</p>
             <p>Topkapı Üniversitesi Bilgisayar Programlama bölümünden mezun oldum.</p>
 
             <hr />
