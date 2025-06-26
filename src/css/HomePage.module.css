@@ -162,7 +162,7 @@ li {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.contactMeZone hr {
+.aboutZoneThisHrHasToHidden {
   width: 100%;
 }
 
@@ -291,7 +291,7 @@ h2, h3, h4, h5 {
     font-size: 0.95rem;
   }
 
-  .aboutZone hr {
+  .aboutZoneThisHrHasToHidden {
     display: none;
   }
 

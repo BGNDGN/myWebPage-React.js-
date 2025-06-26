@@ -43,7 +43,7 @@ function HomePage() {
         <div className={styles.aboutZoneText}>
           <About />
         </div>
-        <hr />
+        <hr className={styles.aboutZoneThisHrHasToHidden}/>
       </div>
 
       <div id="experience" className={styles.experienceZone}>
