@@ -242,6 +242,10 @@ h2, h3, h4, h5 {
 
 @media (max-width: 768px) {
   .navbarDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
     position: static;  
     top: auto;
   }
@@ -328,7 +332,7 @@ h2, h3, h4, h5 {
 }
 
  .aboutZone:hover, .experienceZone:hover, .usingTechnologiesZone:hover, .contactMeZone:hover, .socialMediasZone:hover {
-  width: 100%;
+  width: 95%;
 }
 }
 
