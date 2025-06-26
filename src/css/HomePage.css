@@ -322,7 +322,7 @@ h2, h3, h4, h5 {
 
   .aboutZone:hover, .experienceZone:hover, .usingTechnologiesZone:hover, .contactMeZone:hover, .socialMediasZone:hover {
   transition: 0.2s;
-  width: 675px;
+  width: 90%;
 }
 }
 
