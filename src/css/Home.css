@@ -1,3 +1,4 @@
+/* Reset */
 *,
 *::before,
 *::after {
@@ -33,34 +34,38 @@ html, body, #root {
   user-select: none;
 }
 
-.homeMainDiv {
-  position: relative;
+.loadingPlaceholder {
+  height: 100vh;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  padding: 40px 20px;
-  min-height: 100vh;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.homeMainDiv {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  gap: 40px;
+  min-height: 100vh;
+  align-items: stretch;
   box-sizing: border-box;
 }
 
 .homeFirstDiv {
-  width: 750px;
-  min-height: 500px;
-  height: auto !important;
-  box-sizing: border-box;
-  padding: 20px;
+  width: 350px;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
-  flex-shrink: 0;
-  overflow: visible;
+  min-height: 500px;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .photograph {
@@ -88,10 +93,10 @@ html, body, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   font-weight: 600;
   font-size: 1rem;
   color: #333;
+  box-sizing: border-box;
 }
 
 .socialMedias {
@@ -194,16 +199,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.loadingPlaceholder {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #666;
-}
-
-
+/* Responsive */
 
 @media (max-width: 768px) {
   .homeMainDiv {
@@ -214,7 +210,6 @@ a:hover {
 
   .homeFirstDiv,
   .homeSecondDiv {
-    flex: none;
     width: 100%;
     min-height: auto;
     padding: 20px 15px;
