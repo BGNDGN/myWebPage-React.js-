@@ -14,8 +14,9 @@ body {
 
 .navbarDiv {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #1f2937;
   color: #fff;
   padding: 1rem 2rem;
