@@ -229,8 +229,10 @@ a:hover {
 
   .nameSurname, .title, .socialMedias {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
