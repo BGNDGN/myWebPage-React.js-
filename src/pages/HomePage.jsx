@@ -43,6 +43,7 @@ function HomePage() {
         <div className={styles.aboutZoneText}>
           <About />
         </div>
+        <hr />
       </div>
 
       <div id="experience" className={styles.experienceZone}>
