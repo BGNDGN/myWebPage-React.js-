@@ -291,6 +291,10 @@ h2, h3, h4, h5 {
     font-size: 0.95rem;
   }
 
+  .aboutZone hr {
+    display: none;
+  }
+
   .contactMeZone input,
   .contactMeZone button {
     font-size: 0.95rem;
@@ -331,4 +335,3 @@ h2, h3, h4, h5 {
   width: 90%;
 }
 }
-
