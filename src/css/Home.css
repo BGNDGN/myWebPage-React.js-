@@ -1,149 +1,238 @@
-/* Genel reset ve kutu modeli */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-/* Sayfa container */
 .homeContainer {
   position: relative;
-  z-index: 0;
-  min-height: 100vh;
-  color: white;
+  width: 100%;
+  min-height: 100vh;   
+  overflow-x: hidden;
 }
 
-/* Arka plan video */
 .backgroundVideo {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  z-index: -1; /* Video arka planda */
+  z-index: -1;
 }
 
-/* Video yüklenene kadar gösterilen loading */
-.loadingPlaceholder {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.5rem;
-  z-index: 1;
-}
-
-/* Ana içerik: üstte ve responsive */
 .homeMainDiv {
   position: relative;
-  z-index: 1; /* İçerik video üstünde */
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  min-height: 100vh; 
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-/* İlk bölüm: profil ve sosyal medya */
+
 .homeFirstDiv {
-  background: rgba(0, 0, 0, 0.5); /* Hafif şeffaf arka plan */
-  border-radius: 10px;
-  padding: 1rem 2rem;
-  text-align: center;
+  flex: 0 0 750px; 
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.homeFirstDiv title {
+  padding: 5px;
+}
+
+.homeSecondDiv {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
 }
 
 .burakImage {
-  width: 150px;
-  height: 150px;
   border-radius: 50%;
+  width: 150px;
+  height: 150px; 
   object-fit: cover;
-  border: 3px solid #fff;
+  margin: 0 auto; 
 }
 
-/* Yazılar */
-.nameSurname p,
-.title p,
-.socialMedias p,
-.copyright p {
-  margin: 0.3rem 0;
+.photograph {
+  text-align: center;
 }
 
-.socialMedias p {
-  font-weight: 600;
+.nameSurname,
+.title,
+.socialMedias,
+.copyright {
+  height: 80px;
+  background-color: #eee;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 15px;
+  box-sizing: border-box;
 }
 
-/* İkinci bölüm: linkler */
-.homeSecondDiv {
+.blog,
+.routerToHomePage,
+.routerToLoginPage,
+.routerToRegisterPage {
+  padding: 16px;
+  background-color: #f1f1f1;
+  border-left: 5px solid #4a90e2;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.Icons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
-.homeSecondDiv p {
-  flex: 1 1 250px;
-  color: white;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  font-weight: 700;
-  cursor: default;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
+.socialMedias {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   height: 150px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.routerToHomePage, .routerToLoginPage, .routerToRegisterPage {
   position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: red;
+  box-sizing: border-box;
 }
 
-.homeSecondDiv p:hover {
-  transform: scale(1.05);
+.routerToHomePage:hover, .routerToLoginPage:hover, .routerToRegisterPage:hover {
+  height: 175px;
+  transition: 0.2s;
 }
 
-/* Link içindeki yazılar */
-.routerToHomePageStrong,
-.routerToHomeLoginStrong,
-.routerToHomeRegisterStrong {
-  color: #ffd700;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  display: inline-block;
+.routerToHomePage::before, .routerToLoginPage::before, .routerToRegisterPage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1;
 }
 
-/* Link stili sıfırlama */
-.homeSecondDiv a {
+.routerToHomePage > *, .routerToLoginPage > *, .routerToRegisterPage > * {
+  position: relative;
+  z-index: 2;
+}
+
+.routerToHomePageStrong, .routerToHomeLoginStrong, .routerToHomeRegisterStrong {
+  color: greenyellow;
   text-decoration: none;
 }
 
-/* Responsive */
-
-@media (min-width: 768px) {
-  .homeMainDiv {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .homeFirstDiv,
-  .homeSecondDiv {
-    flex: 1 1 45%;
-  }
-
-  .homeSecondDiv p {
-    height: 200px;
-  }
+.routerToHomePageStrong:hover, .routerToHomeLoginStrong:hover, .routerToHomeRegisterStrong:hover {
+  color: rgb(84, 139, 0);
+  text-decoration: underline;
+  text-decoration-color: rgb(84, 139, 0);
+  transition: 0.2s;
 }
 
-@media (max-width: 480px) {
-  .burakImage {
-    width: 120px;
-    height: 120px;
+
+
+@media (max-width: 768px) {
+  .homeContainer {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    margin-bottom: 10px;
   }
 
-  .homeSecondDiv p {
-    flex: 1 1 100%;
-    height: 130px;
+  .homeMainDiv {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  .homeFirstDiv {
+    flex: none; 
+    width: 95%;
+    max-width: 100%;
+    padding: 16px 16px 16px 16px; 
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  .homeSecondDiv {
+    flex: none; 
+    width: 95%;
+    max-width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .routerToHomePage, .routerToLoginPage, .routerToRegisterPage {
+    display: block !important; 
+    text-align: center;
+    height: auto !important;
+    padding: 20px;
+  }
+
+  .routerToHomePage a, .routerToLoginPage a, .routerToRegisterPage a{
+    display: block; 
+    margin-top: 10px;
+  }
+
+  .nameSurname, .title, .socialMedias, .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    font-size: 17px;
   }
 }
