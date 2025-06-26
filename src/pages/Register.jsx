@@ -36,6 +36,19 @@ function Register() {
     dispatch(registerUser(formData));
   };
 
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log('Video otomatik oynatma engellendi.', error);
+        });
+      }
+    }
+  }, []);
+
   return (
     <div>
       <video autoPlay loop muted className="backgroundVideoRegister" playsInline preload="auto">
