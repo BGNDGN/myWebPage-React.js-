@@ -242,13 +242,8 @@ h2, h3, h4, h5 {
 
 @media (max-width: 768px) {
   .navbarDiv {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    width: 100%;
-    background-color: #1f2937;
-    z-index: 100;
+    position: static;  
+    top: auto;
   }
 
   .navbarZones {
@@ -333,7 +328,7 @@ h2, h3, h4, h5 {
 }
 
  .aboutZone:hover, .experienceZone:hover, .usingTechnologiesZone:hover, .contactMeZone:hover, .socialMediasZone:hover {
-  width: 1000px;
+  width: 100%;
 }
 }
 
