@@ -6,7 +6,6 @@ const Register = lazy(() => import('./pages/Register.jsx'));
 const Login = lazy(() => import('./pages/Login.jsx'));
 const HomePage = lazy(() => import('./pages/HomePage.jsx'));
 
-// ScrollToTop component: route değişince sayfayı en üste kaydırır
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
