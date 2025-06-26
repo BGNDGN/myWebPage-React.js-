@@ -93,6 +93,10 @@
   background-color: #004a99;
 }
 
+.registerZone p {
+  text-align: center;
+}
+
 .pHomePage {
   font-size: 20px;
   margin-left: 143px;

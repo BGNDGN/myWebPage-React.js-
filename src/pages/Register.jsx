@@ -79,10 +79,7 @@ function Register() {
             {loading ? 'Kaydoluyor...' : 'Kaydol'}
           </button>
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          <p>
-            Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}
-            <Link to="/homepage">tıklayınız !</Link>
-          </p>
+          <p>Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}<Link to="/homepage">tıklayınız !</Link></p>
         </form>
 
         <div className="verticalDivider"></div>
