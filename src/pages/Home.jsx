@@ -10,9 +10,9 @@ import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 function Home() {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
-  useEffect(() => {
-    // Route değişiminde scroll reset
-    window.scrollTo(0, 0);
+    useEffect(() => {
+    // Route sonrası yüksekliğin doğru hesaplanması için resize eventi tetikle
+    window.dispatchEvent(new Event('resize'));
   }, []);
 
   return (
