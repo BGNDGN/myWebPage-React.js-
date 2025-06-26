@@ -51,7 +51,7 @@ function Register() {
 
   return (
     <div>
-      <video autoPlay loop muted className="backgroundVideoRegister" playsInline preload="auto">
+      <video autoPlay loop muted className="backgroundVideoRegister" playsInline preload="auto" ref={videoRef}>
         <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776326/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
       </video>
