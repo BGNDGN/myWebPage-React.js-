@@ -33,7 +33,7 @@ function HomePage() {
 
     return () => {
       video?.removeEventListener("loadeddata", handleLoaded);
-      window.scrollTo(0, 0); 
+      window.scrollTo(0, 0);
     };
   }, []);
 
@@ -42,7 +42,10 @@ function HomePage() {
       <style>{`html { scroll-behavior: smooth; }`}</style>
 
       <video autoPlay loop muted className="backgroundVideo" playsInline preload="auto">
-        <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776287/3129671-uhd_3840_2160_30fps_hzqcf0.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776287/3129671-uhd_3840_2160_30fps_hzqcf0.mp4"
+          type="video/mp4"
+        />
         Tarayıcınız video etiketini desteklemiyor.
       </video>
 
@@ -89,7 +92,7 @@ function HomePage() {
       <div id="contact" className="contactMeZone">
         <h2>Benimle İletişime Geçin</h2>
         <hr />
-        <div className='mailDiv'>
+        <div className="mailDiv">
           <label>
             E-mail:
             <input
@@ -97,7 +100,7 @@ function HomePage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="E-posta adresiniz"
-              className='mailInput'
+              className="mailInput"
             />
           </label>
         </div>
@@ -109,12 +112,14 @@ function HomePage() {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               placeholder="Konu başlığı"
-              className='subjectInput'
+              className="subjectInput"
             />
           </label>
         </div>
         <div>
-          <button className='contactMeButton' onClick={handleSendMail}>Gönder</button>
+          <button className="contactMeButton" onClick={handleSendMail}>
+            Gönder
+          </button>
         </div>
       </div>
 
