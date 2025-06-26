@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const Register = lazy(() => import('./pages/Register.jsx'));
