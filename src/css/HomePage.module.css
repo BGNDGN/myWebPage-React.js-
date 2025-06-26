@@ -1,10 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
   background-color: #f9f9f9;
   color: #333;
@@ -95,7 +88,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.burakImage {
+.burakImageHomePage {
   width: 280px;
   height: 280px;
   border-radius: 250px;
@@ -228,7 +221,7 @@ h2, h3, h4, h5 {
   width: 1050px;
 }
 
-.backgroundVideo {
+.homepageBackgroundVideo {
   position: fixed; 
   top: 0;
   left: 0;
@@ -280,7 +273,7 @@ h2, h3, h4, h5 {
     text-align: center;
   }
 
-  .burakImage {
+  .burakImageHomePage{
     width: 180px;
     height: 180px;
     margin-top: 20px;
