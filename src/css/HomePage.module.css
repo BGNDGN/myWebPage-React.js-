@@ -64,7 +64,7 @@ body {
 
 .subjectInput {
   height: 136px;
-  width: 100%;
+  width: 75%;
   padding: 10px;
   font-size: 15px;
   line-height: 1.5;
@@ -316,6 +316,19 @@ h2, h3, h4, h5 {
   .aboutZoneThisHrHasToHidden {
     display: none;
   }
+
+  .subjectInput {
+  height: 136px;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  border: 1.5px solid #bbb;
+  border-radius: 8px;
+  resize: vertical;
+  box-sizing: border-box;
+  resize: none;
+}
 
   .contactMeZone input,
   .contactMeZone button {
