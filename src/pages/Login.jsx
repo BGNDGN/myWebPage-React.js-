@@ -1,4 +1,4 @@
-import '../css/Login.css';
+import styles from '../css/Login.module.css';
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, clearLoginState } from '../redux/slices/loginSlice';
@@ -32,24 +32,24 @@ function Login() {
   };
   
   return (
-    <div className="formContainer">
+    <div className={styles.formContainer}>
 
-      <video autoPlay loop muted className="backgroundVideoRegister" playsInline preload="auto">
+      <video autoPlay loop muted className={styles.backgroundVideoRegister} playsInline preload="auto">
         <source src="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776309/20004535-uhd_2560_1440_30fps_wvukgh.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
       </video>
 
 
-      <h2 className="formTitle">Giriş Yap</h2>
+      <h2 className={styles.formTitle}>Giriş Yap</h2>
 
-        <form onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit} className={styles.form}>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="email">E-mail:</label>
             <input id="email" type="email" name="email" value={formData.email} onChange={handleChange}required/>
           </div>
           
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="password">Şifre:</label>
             <input id="password" type="password" name="password" value={formData.password} onChange={handleChange} required/>
           </div>

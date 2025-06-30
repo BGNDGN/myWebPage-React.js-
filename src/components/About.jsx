@@ -8,24 +8,23 @@ function About() {
             <hr />
 
             <p><strong>📌 Eğitim</strong></p>
-            <p>Plevne Anadolu Lisesinden mezun oldum.</p>
-            <p>Ardından Topkapı Üniversitesi'nde, Bilgisayar Programlama bölümünü kazandım ve</p>
-            <p>Topkapı Üniversitesi Bilgisayar Programlama bölümünden mezun oldum.</p>
+            <p>Plevne Anadolu Lisesi'nden 2022 yılında mezun oldum.</p>
+            <p>Ardından Topkapı Üniversitesi'nde, Bilgisayar Programlama bölümünü kazandım ve Topkapı Üniversitesi'nden, Bilgisayar Programlama bölümünü başarıyla tamamlayarak 2024 yılında mezun oldum.</p>
 
             <hr />
 
             <p><strong>🛠️ Staj Deneyimi</strong></p>
             <p>
                 Stajıma <strong>Modanisa</strong> firmasında başladım. Yaklaşık 3 ay süren staj dönemimi tamamladım.
-                Bu süreçte QA (Quality Assurance) ve ardından frontend/backend geliştirme ekiplerinde görev aldım.
+                Bu süreçte <strong>QA (Quality Assurance)</strong> ve ardından <strong>Frontend/Backend</strong> geliştirme ekiplerinde görev aldım.
             </p>
 
             <hr />
 
             <p><strong>💻 Geliştirdiğim Teknolojiler</strong></p>
             <ul>
-                <li>Nuxt.js, React.js, Next.js ile projeler geliştiriyorum.</li>
-                <li>Node.js ile backend geliştiriyorum.</li>
+                <li><strong>Nuxt.js</strong>, <strong>React.js</strong>, <strong>Next.js</strong> ile <strong>Frontend</strong> kodları yazıyorum.</li>
+                <li><strong>Node.js</strong> ile <strong>Backend</strong> kodları yazıyorum.</li>
             </ul>
 
             <hr />
@@ -40,8 +39,8 @@ function About() {
             <hr/>
 
             <p><strong>🧭 Kariyer Hedefim</strong></p>
-            <p>GitHub hesabımda geliştirdiğim projelerim mevcuttur.</p>
-            <p>İlgili pozisyonlarda çalışmak istiyorum.</p>
+            <p><strong>GitHub</strong> hesabımda geliştirdiğim projelerim mevcuttur.</p>
+            <p>Hedef pozisyonlarımda çalışmak istiyorum.</p>
             <p>GitHub hesabıma ulaşmak için{' '}<a href="https://github.com/BGNDGN?tab=repositories" target="_blank" rel="noopener noreferrer">tıklayınız!</a></p>
 
             <hr />

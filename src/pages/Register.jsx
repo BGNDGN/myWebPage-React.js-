@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUser, clearRegisterState } from '../redux/slices/registerSlice';
-import '../css/Register.css';
+import styles from '../css/Register.module.css';
 import signUpImage from '../assets/undraw_fingerprint-login_19qv.webp';
 
 function Register() {
@@ -38,13 +38,13 @@ function Register() {
 
   return (
     <div>
-      <video className="backgroundVideoRegister" playsInline muted autoPlay loop>
+      <video className={styles.backgroundVideoRegister} playsInline muted autoPlay loop>
         <source src="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_720,h_1280,fps_30/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4"/>
       </video>
 
-      <h2 className="registerTitle">Kayıt Sayfası</h2>
-      <div className="RegisterMain">
-        <form className="registerZone" onSubmit={handleSubmit}>
+      <h2 className={styles.registerTitle}>Kayıt Sayfası</h2>
+      <div className={styles.RegisterMain}>
+        <form className={styles.registerZone} onSubmit={handleSubmit}>
           <label>
             <span>İsim:</span>
             <input
@@ -77,17 +77,17 @@ function Register() {
           </label>
           <button type="submit" disabled={loading}>{loading ? 'Kaydoluyor...' : 'Kaydol'}</button>
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          <p className="ifUWantToRegister">Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}<Link to="/homepage">tıklayınız !</Link></p>
+          <p className={styles.ifUWantToRegister}>Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}<Link to="/homepage">tıklayınız !</Link></p>
         </form>
 
-        <div className="verticalDivider"></div>
+        <div className={styles.verticalDivider}></div>
 
-        <div className="photographZone">
+        <div className={styles.photographZone}>
           <h2>Tüm bilgileriniz Token ile gizlenmektedir.</h2>
           <img
             src={signUpImage}
             alt="Kayıt Ol"
-            className="registerImage"
+            className={styles.registerImage}
             loading="lazy" 
           />
         </div>

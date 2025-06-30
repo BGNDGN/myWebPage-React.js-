@@ -80,7 +80,7 @@
   text-align: center;
 }
 
-.form-group {
+.formGroup {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;

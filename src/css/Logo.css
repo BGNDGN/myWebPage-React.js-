@@ -93,8 +93,11 @@
   }
 
   .icons {
-    justify-content: flex-start; 
-    gap: 10px; 
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    width: 100%; 
+    padding-bottom: 15px;
   }
 
   .custom-hr {

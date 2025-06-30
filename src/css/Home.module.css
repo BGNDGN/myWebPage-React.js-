@@ -73,7 +73,7 @@
 .title,
 .socialMedias,
 .copyright {
-  height: 80px;
+  height: 100px;
   background-color: #eee;
   border-radius: 6px;
   text-align: center;
@@ -140,7 +140,7 @@ a:hover {
   padding: 20px;
   border-radius: 10px;
   overflow: hidden;
-  color: red;
+  color: black;
   box-sizing: border-box;
 }
 
@@ -157,7 +157,7 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   z-index: 1;
 }
@@ -172,16 +172,16 @@ a:hover {
 .routerToHomePageStrong,
 .routerToHomeLoginStrong,
 .routerToHomeRegisterStrong {
-  color: greenyellow;
+  color: white;
   text-decoration: none;
 }
 
 .routerToHomePageStrong:hover,
 .routerToHomeLoginStrong:hover,
 .routerToHomeRegisterStrong:hover {
-  color: rgb(84, 139, 0);
+  color: #4a90e2;
   text-decoration: underline;
-  text-decoration-color: rgb(84, 139, 0);
+  text-decoration-color: #4a90e2;
   transition: 0.2s;
 }
 

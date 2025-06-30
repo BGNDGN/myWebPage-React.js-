@@ -30,7 +30,7 @@ function UsingTechnologies () {
           
             <hr></hr>
 
-            <p>Teknolojilerini kullanarak projeler geliştirdim ve geliştirmeye devam ediyorum.</p>
+            <p>Bu yapıları kullanarak projeler geliştirdim ve geliştirmeye devam ediyorum.</p>
             <p>
                 GitHub hesabıma ulaşmak için{' '}
                 <a href="https://github.com/BGNDGN?tab=repositories" target="_blank" rel="noopener noreferrer">tıklayınız!</a>
