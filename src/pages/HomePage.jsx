@@ -13,6 +13,16 @@ function HomePage() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
 
+  useEffect(() => {
+    document.body.style.backgroundColor = '#f9f9f9';
+    document.body.style.color = '#333';
+
+    return () => {
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
+    };
+  }, []);
+
   const handleSendMail = useCallback(() => {
     const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=burakgundogan25@gmail.com&su=${encodeURIComponent(subject)}&body=Mail adresim:${email}`;
     window.open(gmailURL, "_blank");

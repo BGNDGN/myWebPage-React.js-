@@ -17,6 +17,16 @@ function Register() {
   });
 
   useEffect(() => {
+    document.body.style.backgroundColor = '#f9f9f9';
+    document.body.style.color = '#333';
+
+    return () => {
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
+    };
+  }, []);
+
+  useEffect(() => {
     if (success) {
       alert('Kayıt başarılı! Giriş yapabilirsiniz.');
       dispatch(clearRegisterState());

@@ -9,6 +9,16 @@ import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 import Layout from '../components/Layout';
 
 function Home () {
+  useEffect(() => {
+    document.body.style.backgroundColor = '#f9f9f9'; 
+    document.body.style.color = '#333';
+
+  return () => {
+    document.body.style.backgroundColor = '';
+    document.body.style.color = '';
+  };
+  }, []);
+
   return (
     <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776340/12121108_3840_2160_30fps_snlkju.mp4">
     <div className={styles.homeContainer}>

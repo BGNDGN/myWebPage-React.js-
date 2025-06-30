@@ -13,6 +13,16 @@ function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
   
   useEffect(() => {
+    document.body.style.backgroundColor = '#1f2937';
+    document.body.style.color = '#fff';
+
+    return () => {
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
+    };
+  }, []);
+  
+  useEffect(() => {
     if(success && user) {
       navigate('/homepage'); 
       dispatch(clearLoginState());
