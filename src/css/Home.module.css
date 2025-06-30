@@ -254,15 +254,7 @@ a:hover {
     margin-top: 10px;
   }
 
-  .nameSurname,
-  .title,
-  .socialMedias,
-  .copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-    font-size: 17px;
+  .socialMedias {
+    padding-top: 20px;  
   }
 }

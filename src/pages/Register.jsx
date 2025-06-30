@@ -86,7 +86,7 @@ function Register() {
         <div className={styles.verticalDivider}></div>
 
         <div className={styles.photographZone}>
-          <h2>Tüm bilgileriniz Token ile gizlenmektedir.</h2>
+          <h2 className={styles.tokenIsSafingYourInfos}>Tüm bilgileriniz Token ile gizlenmektedir.</h2>
           <img
             src={signUpImage}
             alt="Kayıt Ol"
