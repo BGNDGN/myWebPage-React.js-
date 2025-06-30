@@ -71,13 +71,22 @@
 
 .nameSurname,
 .title,
-.socialMedias,
 .copyright {
   height: 100px;
   background-color: #eee;
   border-radius: 6px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 35px;
+  box-sizing: border-box;
+}
+
+.socialMedias {
+  height: 100px;
+  background-color: #eee;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
   box-sizing: border-box;
 }
 
