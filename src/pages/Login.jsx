@@ -60,7 +60,7 @@ function Login() {
 
         </form>
 
-        {error && <p className="error-message">{error}</p>}
+        {error && <p className={styles.errorMessage}>{error}</p>}
         <p>Kayıtlı değil misiniz? <Link to="/register">Kayıt olun!</Link></p>
     </div>
   );

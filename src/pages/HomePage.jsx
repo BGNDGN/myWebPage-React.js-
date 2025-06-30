@@ -14,7 +14,7 @@ function HomePage() {
   const [subject, setSubject] = useState('');
 
   const handleSendMail = useCallback(() => {
-    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=burakgundogan25@gmail.com&su=${encodeURIComponent(subject)}&body = Mail adresim: ${email}`;
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=burakgundogan25@gmail.com&su=${encodeURIComponent(subject)}&body=Mail adresim:${email}`;
     window.open(gmailURL, "_blank");
   }, [email, subject]);
 
