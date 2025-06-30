@@ -76,7 +76,7 @@
   background-color: #eee;
   border-radius: 6px;
   text-align: center;
-  padding-top: 35px;
+  padding-top: 40px;
   box-sizing: border-box;
 }
 
@@ -86,7 +86,6 @@
   border-radius: 6px;
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 30px;
   box-sizing: border-box;
 }
 
@@ -264,6 +263,6 @@ a:hover {
   }
 
   .socialMedias {
-    padding-top: 20px;  
+    padding-top: 30px;  
   }
 }
