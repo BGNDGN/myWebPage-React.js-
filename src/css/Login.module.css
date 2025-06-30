@@ -1,3 +1,10 @@
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
 .formContainer {
   max-width: 400px;
   margin: 80px auto;
