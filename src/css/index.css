@@ -14,3 +14,11 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+p {
+  text-align: left;
+  color: #333;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.6;
+}

@@ -7,19 +7,7 @@
   background-color: #1f2937;
   color: #fff;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.backgroundVideoRegister {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+  position: relative;
 }
 
 .formTitle {
@@ -106,23 +94,22 @@
   box-sizing: border-box;
 }
 
-p {
+/* Login sayfası özel p stili (sadece buradaki p’ler ortalanacak) */
+.loginPageParagraph {
   text-align: center;
   margin-top: 20px;
   color: #666;
 }
 
-p a {
+.loginPageParagraph a {
   color: #3f51b5;
   text-decoration: none;
   font-weight: 600;
 }
 
-p a:hover {
+.loginPageParagraph a:hover {
   text-decoration: underline;
 }
-
-
 
 @media (max-width: 768px) {
   .formContainer {
@@ -131,10 +118,6 @@ p a:hover {
     width: 100%;
     max-width: 95%;
     box-sizing: border-box;
-  }
-
-  .backgroundVideoRegister {
-    object-fit: cover;
   }
 
   .formTitle {
@@ -153,7 +136,7 @@ p a:hover {
     padding: 10px;
   }
 
-  p {
+  .loginPageParagraph {
     font-size: 14px;
     padding: 0 10px;
   }

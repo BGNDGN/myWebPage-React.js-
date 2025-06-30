@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { registerUser, clearRegisterState } from '../redux/slices/registerSlice';
 import styles from '../css/Register.module.css';
 import signUpImage from '../assets/undraw_fingerprint-login_19qv.webp';
+import Layout from '../components/Layout';
 
 function Register() {
   const dispatch = useDispatch();
@@ -15,9 +16,6 @@ function Register() {
     email: '',
     password: '',
   });
-
-  // Body style artık Layout'ta yönetiliyor
-  // useEffect kaldırıldı
 
   useEffect(() => {
     if (success) {
@@ -40,13 +38,10 @@ function Register() {
   };
 
   return (
-    <div>
-      <video className={styles.backgroundVideoRegister} playsInline muted autoPlay loop>
-        <source src="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_720,h_1280,fps_30/13523849_2160_3840_100fps_iwomk6.mp4" type="video/mp4"/>
-      </video>
-
-      <h2 className={styles.registerTitle}>Kayıt Sayfası</h2>
+    <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_720,h_1280,fps_30/13523849_2160_3840_100fps_iwomk6.mp4">
       <div className={styles.RegisterMain}>
+        <h2 className={styles.registerTitle}>Kayıt Sayfası</h2>
+
         <form className={styles.registerZone} onSubmit={handleSubmit}>
           <label>
             <span>İsim:</span>
@@ -78,7 +73,9 @@ function Register() {
               required
             />
           </label>
-          <button type="submit" disabled={loading}>{loading ? 'Kaydoluyor...' : 'Kaydol'}</button>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Kaydoluyor...' : 'Kaydol'}
+          </button>
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <p className={styles.ifUWantToRegister}>
             Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}
@@ -94,11 +91,11 @@ function Register() {
             src={signUpImage}
             alt="Kayıt Ol"
             className={styles.registerImage}
-            loading="lazy" 
+            loading="lazy"
           />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
