@@ -16,15 +16,8 @@ function Register() {
     password: '',
   });
 
-  useEffect(() => {
-    document.body.style.backgroundColor = '#f9f9f9';
-    document.body.style.color = '#333';
-
-    return () => {
-      document.body.style.backgroundColor = '';
-      document.body.style.color = '';
-    };
-  }, []);
+  // Body style artık Layout'ta yönetiliyor
+  // useEffect kaldırıldı
 
   useEffect(() => {
     if (success) {
@@ -87,7 +80,10 @@ function Register() {
           </label>
           <button type="submit" disabled={loading}>{loading ? 'Kaydoluyor...' : 'Kaydol'}</button>
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          <p className={styles.ifUWantToRegister}>Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}<Link to="/homepage">tıklayınız !</Link></p>
+          <p className={styles.ifUWantToRegister}>
+            Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}
+            <Link to="/homepage">tıklayınız !</Link>
+          </p>
         </form>
 
         <div className={styles.verticalDivider}></div>
