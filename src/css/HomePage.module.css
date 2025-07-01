@@ -1,13 +1,16 @@
 .navbarDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1f2937;
   color: #fff;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
 }
 
 .navbarPageName a {
@@ -259,11 +262,12 @@ h2, h3, h4, h5 {
 
 @media (max-width: 768px) {
   .navbarDiv {
+    position: static;
+    box-shadow: none;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
     gap: 1rem; 
-    position: static;
   }
 
   .navbarZones {
