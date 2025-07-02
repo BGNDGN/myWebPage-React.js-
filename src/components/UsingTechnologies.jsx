@@ -30,12 +30,9 @@ function UsingTechnologies () {
           
             <hr></hr>
 
-            <p>Bu yapıları kullanarak projeler geliştirdim ve geliştirmeye devam ediyorum.</p>
-            <p>
-                GitHub hesabıma ulaşmak için{' '}
-                <a href="https://github.com/BGNDGN?tab=repositories" target="_blank" rel="noopener noreferrer">tıklayınız!</a>
-            </p>
-            <p>Şuan aktif olarak bu teknolojileri kullanıyorum. Ayrı olarak Next.js öğreniyorum ve projeler geliştiriyorum.</p>
+            <p>Bu <strong>yapıları</strong> kullanarak projeler geliştirdim ve geliştirmeye devam ediyorum.</p>
+            <p><strong>GitHub</strong> hesabıma ulaşmak için{' '}<a href="https://github.com/BGNDGN?tab=repositories" target="_blank" rel="noopener noreferrer">tıklayınız!</a></p>
+            <p>Şuan aktif olarak <strong>bu teknolojileri</strong> kullanıyorum. Ayrı olarak <strong>Next.js</strong> öğreniyorum ve projeler geliştiriyorum.</p>
         </div>
     );
 }

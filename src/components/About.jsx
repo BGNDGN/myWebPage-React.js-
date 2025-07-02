@@ -8,14 +8,14 @@ function About() {
             <hr />
 
             <p><strong>📌 Eğitim</strong></p>
-            <p>Plevne Anadolu Lisesi'nden 2022 yılında mezun oldum.</p>
-            <p>Ardından Topkapı Üniversitesi'nde, Bilgisayar Programlama bölümünü kazandım ve Topkapı Üniversitesi'nden, Bilgisayar Programlama bölümünü başarıyla tamamlayarak 2024 yılında mezun oldum.</p>
+            <p><strong>Plevne Anadolu Lisesi</strong>'nden <strong>2022</strong> yılında mezun oldum.</p>
+            <p>Ardından <strong>Topkapı Üniversitesi</strong>'nde, <strong>Bilgisayar Programlama</strong> bölümünü kazandım ve <strong>Topkapı Üniversitesi</strong>'nden, <strong>Bilgisayar Programlama</strong> bölümünü başarıyla tamamlayarak <strong>2024</strong> yılında mezun oldum.</p>
 
             <hr />
 
             <p><strong>🛠️ Staj Deneyimi</strong></p>
             <p>
-                Stajıma <strong>Modanisa</strong> firmasında başladım. Yaklaşık 3 ay süren staj dönemimi tamamladım.
+                Stajıma <strong>Modanisa</strong> firmasında başladım. Yaklaşık <strong>3</strong> ay süren staj dönemimi tamamladım.
                 Bu süreçte <strong>QA (Quality Assurance)</strong> ve ardından <strong>Frontend/Backend</strong> geliştirme ekiplerinde görev aldım.
             </p>
 
@@ -31,7 +31,7 @@ function About() {
 
             <p><strong>🎯 Hedef Pozisyonlarım</strong></p>
             <ul>
-                <li>Junior Frontend Developer (önceliğim)</li>
+                <li>Junior Frontend Developer <strong>(önceliğim)</strong></li>
                 <li>Junior Full-Stack Developer</li>
                 <li>Junior Backend Developer</li>
             </ul>
@@ -40,19 +40,19 @@ function About() {
 
             <p><strong>🧭 Kariyer Hedefim</strong></p>
             <p><strong>GitHub</strong> hesabımda geliştirdiğim projelerim mevcuttur.</p>
-            <p>Hedef pozisyonlarımda çalışmak istiyorum.</p>
-            <p>GitHub hesabıma ulaşmak için{' '}<a href="https://github.com/BGNDGN?tab=repositories" target="_blank" rel="noopener noreferrer">tıklayınız!</a></p>
+            <p><stong>Hedef pozisyonlarımda</stong> çalışmak istiyorum.</p>
+            <p><strong>GitHub</strong> hesabıma ulaşmak için{' '}<a href="https://github.com/BGNDGN?tab=repositories" target="_blank" rel="noopener noreferrer">tıklayınız!</a></p>
 
             <hr />
 
             <p><strong>🔧 Ekstra Bilgiler:</strong></p>
-            <p>Ayrıca bireysel olarak öğrendiğim programlama dilleri şunlardır:</p>
+            <p>Ayrıca <strong>bireysel</strong> olarak öğrendiğim <strong>programlama dilleri</strong> şunlardır:</p>
                 <ul>
                     <li>C</li>
                     <li>C#</li>
                     <li>PHP</li>
                 </ul>
-            <p>Bu dilleri online eğitimlerle ve okulda edindiğim bilgilerle öğrendim ve </p>
+            <p>Bu dilleri <strong>online eğitimlerle</strong> ve <strong>okulda</strong> edindiğim bilgilerle öğrendim ve </p>
             <p>kendimi geliştirdim.</p>
 
             <hr/>
