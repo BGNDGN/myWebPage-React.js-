@@ -13,12 +13,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Projende kullandığın node versiyonu
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
       - name: Copy files to server
         uses: appleboy/scp-action@v0.1.5
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.SSH_KEY }}
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           source: "./build/"
           target: "/var/www/frontend"
@@ -26,9 +37,9 @@ jobs:
       - name: SSH commands to restart backend and nginx
         uses: appleboy/ssh-action@v0.1.6
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.SSH_KEY }}
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           script: |
             pm2 restart backend
