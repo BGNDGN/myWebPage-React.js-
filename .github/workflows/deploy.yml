@@ -31,8 +31,9 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
-          source: "./build/"
+          source: "./build/**"
           target: "/var/www/frontend"
+          debug: true
 
       - name: SSH commands to restart backend and nginx
         uses: appleboy/ssh-action@v0.1.6
