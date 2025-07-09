@@ -1,2 +1,2 @@
-const baseURL = 'https://mywebpage-jbyh.onrender.com';
+const baseURL = process.env.REACT_APP_API_URL;
 export default baseURL;
