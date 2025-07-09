@@ -1,177 +1,180 @@
-.registerTitle {
+.RegisterMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto 60px auto; /* sayfa üstünde boşluk yok, altta biraz boşluk */
+  position: relative;
+  z-index: 1;
+  color: white;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  font-size: 36px;
-  color: #222;
-  font-weight: 700;
-  text-decoration: underline;
+  justify-content: flex-start;
+  min-height: 100vh; 
 }
 
-.RegisterMain {
-  position: relative;  
-  z-index: 1;          
-  display: grid;
-  grid-template-columns: 2fr 1px 2fr;
-  gap: 60px;
+.photographZone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 60px 80px;
-  min-height: 600px;
+  background: #1f2937;
+  padding: 10px 0px 30px 0px; 
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 .registerZone {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 40px 60px; 
-  gap: 20px;
-  background-color: #fafafa;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  background: #1f2937;
+  padding: 30px 0px 10px 0px; 
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.registerImage {
   width: 100%;
-  box-sizing: border-box;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+}
+
+.registerTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
 .registerZone label {
   display: flex;
   align-items: center;
-  gap: 18px;
-  font-weight: 600;
-  font-size: 18px;
+  justify-content: flex-start;
+  color: #333;
+  font-size: 1rem;
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto 15px auto;
 }
 
 .registerZone label span {
-  min-width: 100px;
-  display: inline-block;
-  text-align: right;
+  min-width: 70px; 
+  text-align: left;
+  color: white;
 }
 
 .registerZone input {
-  flex: 1;
-  width: 100%;
-  padding: 12px 14px;
-  border: 1.5px solid #bbb;
+  flex: 1; 
+  padding: 12px 15px;
+  border: 1.5px solid #ccc;
   border-radius: 8px;
-  font-size: 17px;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
+  font-size: 1rem;
 }
 
 .registerZone input:focus {
-  border-color: #007bff;
   outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px #4a90e2;
 }
 
 .registerZone button {
-  width: 83%;
-  align-self: flex-end;
-  padding: 14px 0;
   margin-top: 15px;
-  border: none;
-  border-radius: 12px;
-  background-color: #0069d9;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  background-color: #4a90e2;
   color: white;
-  font-size: 17px;
-  font-weight: 600;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  box-sizing: border-box;
-  transition: background-color 0.3s;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  max-width: 400px;
+  width: 100%;
 }
 
-.registerZone button:hover {
-  background-color: #004a99;
+.registerZone button:disabled {
+  background-color: #a0c1f7;
+  cursor: not-allowed;
+}
+
+.registerZone button:hover:not(:disabled) {
+  background-color: #357ABD;
 }
 
 .ifUWantToRegister {
-  width: 83%;
-  text-align: center;
-  margin: 0 0 0 auto;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: white;
 }
 
-.pHomePage {
-  font-size: 20px;
-  margin-left: 143px;
+.ifUWantToRegister a {
+  color: #4a90e2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.verticalDivider {
-  height: 90%;
-  width: 2px;
-  background-color: #ccc;
-  border-radius: 2px;
-  justify-self: center;
-}
-
-.photographZone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: linear-gradient(135deg, #f7f9fc, #e5eaf1);
-  padding: 40px 60px;
-  height: 500px;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease;
-}
-
-.photographZone:hover {
-  transform: scale(1.03);
+.ifUWantToRegister a:hover {
+  color: #357ABD;
+  text-decoration: underline;
 }
 
 .tokenIsSafingYourInfos {
-  width: 100%;   
-  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.registerImage {
-  max-width: 100%;
-  max-height: 95%;
-  object-fit: contain;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+.tokenIsSafingYourInfosHr {
+  width: 90%;
+  margin-bottom: 40px;
 }
 
 
 
+/* Responsive - Mobil için */
 @media (max-width: 768px) {
   .registerTitle {
     font-size: 26px;
     margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .RegisterMain {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    /* Mobilde ortalamak için */
+    min-height: auto;
+    justify-content: center;
     padding: 30px 20px;
+    gap: 40px;
   }
 
-  .verticalDivider {
-    display: none;
-  }
-
-  .registerZone {
-    padding: 25px 20px;
-    gap: 16px;
-  }
-
+  /* Label ve input alt alta */
   .registerZone label {
     flex-direction: column;
     align-items: flex-start;
     font-size: 16px;
+    margin-bottom: 12px;
   }
 
   .registerZone label span {
     text-align: left;
     margin-bottom: 5px;
+    color: white;
   }
 
   .registerZone input {
     font-size: 16px;
     padding: 10px 12px;
+    width: 100%;
   }
 
   .registerZone button {
