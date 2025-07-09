@@ -8,6 +8,8 @@ function About() {
             <hr />
 
             <p><strong>📌 Eğitim</strong></p>
+            <p>Herkese Merhaba !</p>
+            <p>Adım<strong>Burak Gündoğan.</strong></p>
             <p><strong>Plevne Anadolu Lisesi</strong>'nden <strong>2022</strong> yılında mezun oldum.</p>
             <p>Ardından <strong>Topkapı Üniversitesi</strong>'nde, <strong>Bilgisayar Programlama</strong> bölümünü kazandım ve <strong>Topkapı Üniversitesi</strong>'nden, <strong>Bilgisayar Programlama</strong> bölümünü başarıyla tamamlayarak <strong>2024</strong> yılında mezun oldum.</p>
 
