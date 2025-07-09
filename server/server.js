@@ -8,9 +8,13 @@ const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+const corsOptions = {
+  origin: 'http://116.202.30.140', 
+  credentials: true, 
+};
+app.use(cors(corsOptions));
 
+app.use(express.json());
 app.use('/api', authRoutes);
 
 const PORT = process.env.PORT || 7000;
