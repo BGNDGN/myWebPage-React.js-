@@ -15,10 +15,9 @@ const authRoutes  = require('./routes/authRoutes');
 const app = express();
 
 /* ---------- CORS ---------- */
-const allowedOrigins = ['https://burakgundogan.net', 'https://www.burakgundogan.net'];
-app.use(cors({
+const corsOptions = {
   origin: function(origin, callback) {
-    if(!origin) return callback(null, true); // Postman vb için
+    if(!origin) return callback(null, true);
     if(allowedOrigins.indexOf(origin) === -1){
       const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
       return callback(new Error(msg), false);
@@ -26,7 +25,7 @@ app.use(cors({
     return callback(null, true);
   },
   credentials: true
-}));
+};
 
 app.use(cors(corsOptions));
 
