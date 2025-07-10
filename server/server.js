@@ -1,22 +1,34 @@
+// ========================
+//  BACKEND  SERVER.JS
+// ========================
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
-const connectDB = require('./config/mongodbConnect');
-const authRoutes = require('./routes/authRoutes');
+const connectDB   = require('./config/mongodbConnect');
+const authRoutes  = require('./routes/authRoutes');
 
 const app = express();
 
+/* ---------- CORS ---------- */
+const allowedOrigins = [
+  'https://burakgundogan.net',
+  'https://www.burakgundogan.net',
+];
+
 const corsOptions = {
-  origin: 'http://116.202.30.140', 
-  credentials: true, 
+  origin: allowedOrigins,
+  credentials: true,
 };
+
 app.use(cors(corsOptions));
 
+/* ---------- Middleware & Routes ---------- */
 app.use(express.json());
 app.use('/api', authRoutes);
 
+/* ---------- DB & Server ---------- */
 connectDB();
 
 const PORT = process.env.PORT || 7000;
