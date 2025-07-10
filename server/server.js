@@ -14,33 +14,21 @@ const authRoutes  = require('./routes/authRoutes');
 
 const app = express();
 
-/* ---------- CORS ---------- */
-const corsOptions = {
-  origin: function(origin, callback) {
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
-  credentials: true
-};
+// ---------- Basitleştirilmiş CORS ayarı (test amaçlı) ----------
+app.use(cors()); // Tüm originlere izin verir, daha sonra bunu uygun hale getirebilirsin
 
-app.use(cors(corsOptions));
-
-/* ---------- Middleware & Routes ---------- */
+// ---------- Middleware & Routes ----------
 app.use(express.json());
 app.use('/api', authRoutes);
 
-/* ---------- Frontend Build klasörünü servis et ---------- */
+// ---------- Frontend Build klasörünü servis et ----------
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
 });
 
-/* ---------- DB & Server ---------- */
+// ---------- DB & Server ----------
 connectDB();
 
 const PORT = process.env.PORT || 7000;
