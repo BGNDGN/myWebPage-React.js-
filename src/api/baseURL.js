@@ -1,2 +1,8 @@
-const baseURL = process.env.REACT_APP_API_URL || "http://localhost:7000";
+const devURL = "http://localhost:7000";
+const prodURL = "https://burakgundogan.net";
+
+const baseURL = process.env.NODE_ENV === "production" ? prodURL : devURL;
+
+console.log('Final baseURL:', baseURL);
+
 export default baseURL;
