@@ -15,18 +15,18 @@ const app = express();
 const allowedOrigins = [
   'https://burakgundogan.net',
   'https://www.burakgundogan.net',
-  'http://116.202.30.140',       // IP adresi veya ihtiyaç duyulan diğer originler
-  'http://localhost:3000',       // Geliştirme ortamı için
+  'http://localhost:3000', // Gerekirse local geliştirme için
 ];
 
 const corsOptions = {
-  origin: function(origin, callback) {
-    if (!origin) return callback(null, true); // Postman gibi araçlar için
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS policy: Bu origin izinli değil.'));
+  origin: function(origin, callback){
+    // Eğer origin yoksa (postman, curl gibi) izin ver
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.indexOf(origin) === -1){
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
     }
+    return callback(null, true);
   },
   credentials: true,
 };
