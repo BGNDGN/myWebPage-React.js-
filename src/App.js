@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import usePageViews from './hooks/usePageViews';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const Register = lazy(() => import('./pages/Register.jsx'));
@@ -7,6 +8,8 @@ const Login = lazy(() => import('./pages/Login.jsx'));
 const HomePage = lazy(() => import('./pages/HomePage.jsx'));
 
 function App() {
+  usePageViews();  
+
   return (
     <>
       <Suspense fallback={<div>Yükleniyor...</div>}>

@@ -9,6 +9,7 @@ import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 import Layout from '../components/Layout';
 
 function Home () {
+  
   return (
     <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776340/12121108_3840_2160_30fps_snlkju.mp4">
       <div className={styles.homeContainer}>
