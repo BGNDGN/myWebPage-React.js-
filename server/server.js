@@ -15,24 +15,18 @@ const authRoutes  = require('./routes/authRoutes');
 const app = express();
 
 /* ---------- CORS ---------- */
-const allowedOrigins = [
-  'https://burakgundogan.net',
-  'https://www.burakgundogan.net',
-  'http://localhost:3000', // Gerekirse local geliştirme için
-];
-
-const corsOptions = {
-  origin: function(origin, callback){
-    // Eğer origin yoksa (postman, curl gibi) izin ver
-    if(!origin) return callback(null, true);
+const allowedOrigins = ['https://burakgundogan.net', 'https://www.burakgundogan.net'];
+app.use(cors({
+  origin: function(origin, callback) {
+    if(!origin) return callback(null, true); // Postman vb için
     if(allowedOrigins.indexOf(origin) === -1){
       const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
       return callback(new Error(msg), false);
     }
     return callback(null, true);
   },
-  credentials: true,
-};
+  credentials: true
+}));
 
 app.use(cors(corsOptions));
 
