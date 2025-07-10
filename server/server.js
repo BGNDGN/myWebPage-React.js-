@@ -1,6 +1,9 @@
 // ========================
 //  BACKEND  SERVER.JS
 // ========================
+
+console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'OK' : 'Missing');
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
