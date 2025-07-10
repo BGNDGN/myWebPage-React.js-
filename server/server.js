@@ -1,37 +1,35 @@
-// ========================
-//  BACKEND  SERVER.JS
-// ========================
-
-console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'OK' : 'Missing');
-
 const express = require('express');
-const cors = require('cors');
 const path = require('path');
+const cors = require('cors');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
-const connectDB   = require('./config/mongodbConnect');
-const authRoutes  = require('./routes/authRoutes');
+const connectDB = require('./config/mongodbConnect');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
-// ---------- Basitleştirilmiş CORS ayarı (test amaçlı) ----------
-app.use(cors()); // Tüm originlere izin verir, daha sonra bunu uygun hale getirebilirsin
-
-// ---------- Middleware & Routes ----------
+app.use(cors());
 app.use(express.json());
+
+// ✅ TEST ENDPOINT
+app.get('/test', (req, res) => {
+  res.json({ message: 'TEST endpoint çalışıyor!' });
+});
+
+// ✅ API route'ları
 app.use('/api', authRoutes);
 
-// ---------- Frontend Build klasörünü servis et ----------
+// ✅ Frontend build klasörü
 app.use(express.static(path.join(__dirname, '../frontend/build')));
-
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
 });
 
-// ---------- DB & Server ----------
+// ✅ DB bağlantısı
 connectDB();
 
+// ✅ Server başlat
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, () => {
-  console.log(`Server ${PORT} portunda çalışıyor`);
+  console.log(`🟢 server.js çalıştı! Server ${PORT} portunda çalışıyor` );
 });
