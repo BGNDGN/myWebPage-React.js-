@@ -28,6 +28,13 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/api', authRoutes);
 
+/* ---------- Frontend Build klasörünü servis et ---------- */
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
+});
+
 /* ---------- DB & Server ---------- */
 connectDB();
 
