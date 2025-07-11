@@ -160,24 +160,27 @@
     align-items: flex-start;
     font-size: 16px;
     margin-bottom: 12px;
+    margin-left: 20px;
   }
 
   .registerZone label span {
     text-align: left;
     margin-bottom: 5px;
+    margin-left: 3px;
     color: white;
   }
 
   .registerZone input {
     font-size: 16px;
     padding: 10px 12px;
-    width: 100%;
+    width: 90%;
   }
 
   .registerZone button {
-    width: 100%;
+    width: 90%;
     font-size: 16px;
     padding: 12px;
+    margin-left: 0px;
   }
 
   .ifUWantToRegister {

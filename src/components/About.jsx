@@ -41,7 +41,7 @@ function About() {
 
             <p><strong>🧭 Kariyer Hedefim</strong></p>
             <p><strong>GitHub</strong> hesabımda geliştirdiğim projelerim mevcuttur.</p>
-            <p><stong>Hedef pozisyonlarımda</stong> çalışmak istiyorum.</p>
+            <p><strong>Hedef pozisyonlarımda</strong> çalışmak istiyorum.</p>
             <p><strong>GitHub</strong> hesabıma ulaşmak için{' '}<a href="https://github.com/BGNDGN?tab=repositories" target="_blank" rel="noopener noreferrer">tıklayınız!</a></p>
 
             <hr />
