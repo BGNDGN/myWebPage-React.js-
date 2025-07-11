@@ -8,7 +8,7 @@ Bu proje, kişisel veya profesyonel amaçlarla hazırlanmış bir web sitesi pro
 
 - React / Vue / Nuxt (Kullandığın teknolojiye göre değiştir)
 - Responsive tasarım
-- API entegrasyonu (varsa belirt)
+- API entegrasyonu 
 - Git LFS ile büyük dosya yönetimi
 - Kolay özelleştirilebilir yapı
 
