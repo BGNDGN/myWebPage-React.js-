@@ -6,6 +6,7 @@ const Home = lazy(() => import('./pages/Home.jsx'));
 const Register = lazy(() => import('./pages/Register.jsx'));
 const Login = lazy(() => import('./pages/Login.jsx'));
 const HomePage = lazy(() => import('./pages/HomePage.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
 function App() {
   usePageViews();  
@@ -18,6 +19,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/homepage" element={<HomePage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </>

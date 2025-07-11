@@ -5,7 +5,7 @@
   gap: 20px;
   padding: 40px 20px;
   max-width: 600px;
-  margin: 0 auto 60px auto; /* sayfa üstünde boşluk yok, altta biraz boşluk */
+  margin: 0 auto 60px auto; 
   position: relative;
   z-index: 1;
   color: white;
@@ -139,7 +139,6 @@
 
 
 
-/* Responsive - Mobil için */
 @media (max-width: 768px) {
   .registerTitle {
     font-size: 26px;
@@ -150,14 +149,12 @@
   }
 
   .RegisterMain {
-    /* Mobilde ortalamak için */
     min-height: auto;
     justify-content: center;
     padding: 30px 20px;
     gap: 40px;
   }
 
-  /* Label ve input alt alta */
   .registerZone label {
     flex-direction: column;
     align-items: flex-start;

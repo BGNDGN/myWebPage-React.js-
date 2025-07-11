@@ -1,5 +1,3 @@
-// src/api/baseURL.js
-
 const baseURL = "https://burakgundogan.net";
 
 console.log('Using baseURL:', baseURL);

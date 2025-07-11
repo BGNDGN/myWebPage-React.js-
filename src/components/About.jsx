@@ -53,8 +53,7 @@ function About() {
                     <li>C#</li>
                     <li>PHP</li>
                 </ul>
-            <p>Bu dilleri <strong>online eğitimlerle</strong> ve <strong>okulda</strong> edindiğim bilgilerle öğrendim ve </p>
-            <p>kendimi geliştirdim.</p>
+            <p>Bu dilleri <strong>online eğitimlerle</strong> ve <strong>okulda</strong> edindiğim bilgilerle öğrendim ve kendimi geliştirdim.</p>
 
             <hr/>
         </div>

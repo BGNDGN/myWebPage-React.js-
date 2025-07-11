@@ -55,6 +55,7 @@
   flex-direction: column;
   gap: 16px;
   box-sizing: border-box;
+  height: 75.5vh;
 }
 
 .burakImage {
