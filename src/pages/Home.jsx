@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../css/Home.module.css';
 import burakImage from '../assets/burak-profile.webp';
@@ -9,7 +9,28 @@ import homepage from '../assets/undraw_fingerprint-login_19qv.webp';
 import Layout from '../components/Layout';
 
 function Home () {
-  
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const images = [homepage, register, login];
+    let loadedCount = 0;
+
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          setImagesLoaded(true);
+        }
+      };
+    });
+  }, []);
+
+  if (!imagesLoaded) {
+    return <div style={{ height: '100vh', display:'flex', justifyContent:'center', alignItems:'center' }}>Yükleniyor...</div>;
+  }
+
   return (
     <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776340/12121108_3840_2160_30fps_snlkju.mp4">
       <div className={styles.homeContainer}>

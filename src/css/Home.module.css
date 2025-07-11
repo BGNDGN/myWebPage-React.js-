@@ -55,7 +55,7 @@
   flex-direction: column;
   gap: 16px;
   box-sizing: border-box;
-  height: auto;
+  height: 727px;
 }
 
 .burakImage {
@@ -162,13 +162,6 @@ a:hover {
   box-sizing: border-box;
 }
 
-.routerToHomePage:hover,
-.routerToLoginPage:hover,
-.routerToRegisterPage:hover {
-  height: 175px;
-  transition: 0.2s;
-}
-
 .routerToHomePage::before,
 .routerToLoginPage::before,
 .routerToRegisterPage::before {
@@ -246,6 +239,7 @@ a:hover {
     padding: 15px;
     box-sizing: border-box;
     margin-bottom: 0px;
+    height: auto;
   }
 
   .routerToHomePage,
