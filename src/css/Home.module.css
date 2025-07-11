@@ -55,7 +55,7 @@
   flex-direction: column;
   gap: 16px;
   box-sizing: border-box;
-  height: 75.5vh;
+  height: auto;
 }
 
 .burakImage {
@@ -245,6 +245,7 @@ a:hover {
     max-width: 100%;
     padding: 15px;
     box-sizing: border-box;
+    margin-bottom: 0px;
   }
 
   .routerToHomePage,

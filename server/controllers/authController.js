@@ -21,9 +21,6 @@ exports.loginUser = async (req, res) => {
     return res.status(400).json({ message: 'E-posta ve şifre zorunludur.' });
 
   try {
-
-    console.log('Login isteği geldi:', req.body);
-
     const user = await User.findOne({ email });
     if (!user)
       return res.status(401).json({ message: 'Geçersiz kullanıcı veya şifre.' });
@@ -53,8 +50,6 @@ exports.loginUser = async (req, res) => {
 };
 
 exports.registerUser = async (req, res) => {
-  console.log('Register endpoint hit');
-
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {

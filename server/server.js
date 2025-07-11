@@ -11,10 +11,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/test', (req, res) => {
-  res.json({ message: 'TEST endpoint çalışıyor!' });
-});
-
 app.use('/api', authRoutes);
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
@@ -26,5 +22,5 @@ connectDB();
 
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, () => {
-  console.log(`🟢 server.js çalıştı! Server ${PORT} portunda çalışıyor` );
+  console.log(`server.js çalıştı! Server ${PORT} portunda çalışıyor` );
 });
