@@ -167,6 +167,7 @@
     text-align: left;
     margin-bottom: 5px;
     color: white;
+    margin-left: -3px;
   }
 
   .registerZone input {
