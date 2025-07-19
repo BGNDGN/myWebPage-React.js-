@@ -19,7 +19,7 @@ function HomePage() {
   }, [email, subject]);
 
   return (
-    <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/v1750776287/3129671-uhd_3840_2160_30fps_hzqcf0.mp4">
+    <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_1920,h_1080,fps_30/v1750776287/3129671-uhd_3840_2160_30fps_hzqcf0.mp4">
       <div>
         <div className={styles.navbarDiv}>
           <div className={styles.navbarPageName}>
