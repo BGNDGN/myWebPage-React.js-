@@ -38,7 +38,7 @@ function Register() {
   };
 
   return (
-    <Layout>
+    <Layout videoUrl="https://burakgundogan.net/videos/1093662-hd_1920_1080_30fps.mp4">
       <div className={styles.RegisterMain}>
         <h2 className={styles.registerTitle}>Kayıt Sayfası</h2>
 
