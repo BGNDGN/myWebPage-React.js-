@@ -32,7 +32,7 @@ function Home () {
   }
 
   return (
-    <Layout videoUrl="https://burakgundogan.net/videos/12121108_3840_2160_30fps_snlkju.mp4">
+    <Layout videoUrl="https://burakgundogan.net/videos/857045-hd_1920_1080_30fps.mp4">
       <div className={styles.homeContainer}>
         <div className={styles.homeMainDiv}>
           <div className={styles.homeFirstDiv}>
