@@ -32,7 +32,7 @@ function Home () {
   }
 
   return (
-    <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_1920,h_1080,fps_30/v1750776340/12121108_3840_2160_30fps_snlkju.mp4">
+    <Layout videoUrl="https://burakgundogan.net/videos/12121108_3840_2160_30fps_snlkju.mp4">
       <div className={styles.homeContainer}>
         <div className={styles.homeMainDiv}>
           <div className={styles.homeFirstDiv}>

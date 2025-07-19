@@ -38,7 +38,7 @@ function Register() {
   };
 
   return (
-    <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_720,h_1280,fps_30/13523849_2160_3840_100fps_iwomk6.mp4">
+    <Layout videoUrl="https://burakgundogan.net/videos/13523849_2160_3840_100fps_iwomk6.mp4">
       <div className={styles.RegisterMain}>
         <h2 className={styles.registerTitle}>Kayıt Sayfası</h2>
 

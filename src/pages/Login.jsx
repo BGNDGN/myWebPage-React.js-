@@ -33,7 +33,7 @@ function Login() {
   };
 
   return (
-    <Layout videoUrl="https://res.cloudinary.com/deh41xzpo/video/upload/f_auto,q_auto,w_1920,h_1080,fps_30/v1750776309/20004535-uhd_2560_1440_30fps_wvukgh.mp4">
+    <Layout videoUrl="https://burakgundogan.net/videos/20004535-uhd_2560_1440_30fps_wvukgh.mp4">
       <div className={styles.formContainer}>
         <h2 className={styles.formTitle}>Giriş Yap</h2>
 
