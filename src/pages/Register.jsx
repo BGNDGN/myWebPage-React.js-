@@ -36,12 +36,18 @@ function Register() {
   }, [success, dispatch, navigate]);
 
   const validateName = (name) => {
+    if (!name.trim()) {
+      return 'İsim alanı boş bırakılamaz.';
+    }
+
     if (/\d/.test(name)) {
-      return 'Sayı girilemez.';
+      return 'İsim alanına sayı girilemez.';
     }
-    if (name.length > 0 && /^[a-z]/.test(name[0])) {
-      return 'İlk karakter büyük olmalı.';
+
+    if (/[^a-zA-ZçÇğĞıİöÖşŞüÜ\s]/.test(name)) {
+      return 'İsim alanına özel karakter girilemez.';
     }
+
     return '';
   };
 
