@@ -217,7 +217,7 @@
     flex: none;
     font-size: 16px;
     padding: 10px 12px;
-    width: 68%; 
+    width: 67.5%; 
     margin-left: 5px;
   }
 
@@ -233,7 +233,7 @@
   }
 
   .ifUWantToRegister {
-    width: 100%;
+    width: 90%;
     text-align: center;
   }
 
