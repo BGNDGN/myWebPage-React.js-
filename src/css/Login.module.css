@@ -161,12 +161,14 @@
 
   .formGroup label {
     min-width: auto;
+    font-size: 1.1rem;
     margin-bottom: 5px;
   }
 
   .formInput {
     width: 100%;
     padding: 10px 12px;
+    font-size: 0.95rem;
   }
 
   .submitButton {
@@ -174,6 +176,7 @@
     padding: 12px;
     margin-right: 10px;
     margin-left: 10px;
+    font-size: 0.95rem;
   }
 
   .loginPageParagraph {
