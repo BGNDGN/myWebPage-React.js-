@@ -112,14 +112,14 @@ function Register() {
         <form className={styles.registerZone} onSubmit={handleSubmit}>
           <label className={styles.registerInputGroup}>
             <span className={styles.registerInputLabel}>İsim:</span>
-            <input className={styles.registerInputField} name="name" type="text" maxLength={30} value={formData.name} onChange={handleNameChange} required/>
+            <input className={styles.registerInputField} name="name" type="text" maxLength={23} value={formData.name} onChange={handleNameChange} required/>
           </label>
 
             {submitted && formErrors.name && (<p className={styles.registerInputError}>{formErrors.name}</p>)}
 
           <label className={styles.registerInputGroup}>
             <span className={styles.registerInputLabel}>E-mail:</span>
-            <input className={styles.registerInputField} name="email" type="email" maxLength={30} value={formData.email} onChange={handleEmailChange} required/>
+            <input className={styles.registerInputField} name="email" type="email" maxLength={23} value={formData.email} onChange={handleEmailChange} required/>
           </label>
 
             {submitted && formErrors.email && (<p className={styles.registerInputError}>{formErrors.email}</p>)}

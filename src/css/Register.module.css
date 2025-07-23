@@ -209,11 +209,16 @@
     margin-right: 15px; 
   }
 
+  .registerInputGroup {
+    padding-left: 15px;
+  }
+
   .registerZone input {
+    flex: none;
     font-size: 16px;
     padding: 10px 12px;
-    width: calc(100% - 85px); 
-    margin-left: 0;
+    width: 70.5%; 
+    margin-left: 5px;
   }
 
   .registerZone button {
@@ -224,7 +229,7 @@
   }
 
   .registerEyeButton {
-    right: 4%;
+    right: 8%;
   }
 
   .ifUWantToRegister {

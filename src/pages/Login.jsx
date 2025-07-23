@@ -84,7 +84,7 @@ function Login() {
 
           <div className={styles.formGroup}>
             <label htmlFor="email">E-mail:</label>
-            <input id="email" type="email" name="email" maxLength={30} value={formData.email} onChange={handleChange} required/>
+            <input id="email" type="email" name="email" maxLength={23} value={formData.email} onChange={handleChange} required/>
             {formErrors.email && <p className={styles.errorMessage}>{formErrors.email}</p>}
           </div>
 
