@@ -213,6 +213,10 @@
     padding-left: 12px;
   }
 
+  .registerInputError {
+    margin-right: -17px;
+  }
+
   .registerZone input {
     flex: none;
     font-size: 16px;
