@@ -210,14 +210,14 @@
   }
 
   .registerInputGroup {
-    padding-left: 15px;
+    padding-left: 12px;
   }
 
   .registerZone input {
     flex: none;
     font-size: 16px;
     padding: 10px 12px;
-    width: 70.5%; 
+    width: 68%; 
     margin-left: 5px;
   }
 
