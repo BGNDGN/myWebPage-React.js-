@@ -5,6 +5,7 @@ import { registerUser, clearRegisterState } from '../redux/slices/registerSlice'
 import styles from '../css/Register.module.css';
 import signUpImage from '../assets/undraw_fingerprint-login_19qv.webp';
 import Layout from '../components/Layout';
+import { Eye, EyeOff } from 'lucide-react';
 
 function Register() {
   const dispatch = useDispatch();
@@ -17,6 +18,15 @@ function Register() {
     password: '',
   });
 
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [submitted, setSubmitted] = useState(false); 
+
   useEffect(() => {
     if (success) {
       alert('Kayıt başarılı! Giriş yapabilirsiniz.');
@@ -25,16 +35,73 @@ function Register() {
     }
   }, [success, dispatch, navigate]);
 
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+  const validateName = (name) => {
+    if (/\d/.test(name)) {
+      return 'Sayı girilemez.';
+    }
+    if (name.length > 0 && /^[a-z]/.test(name[0])) {
+      return 'İlk karakter büyük olmalı.';
+    }
+    return '';
+  };
+
+  const validateEmail = (email) => {
+    const allowedDomains = ['gmail.com', 'hotmail.com', 'outlook.com'];
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) return 'Geçerli gmail, hotmail veya outlook adresi girin.';
+
+    const domain = email.split('@')[1];
+    if (!allowedDomains.includes(domain)) return 'Geçerli gmail, hotmail veya outlook adresi girin.';
+    return '';
+  };
+
+  const validatePassword = (password) => {
+    const startsWithUpper = /^[A-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    if (!startsWithUpper || !hasNumber) {
+      return 'Şifre büyük harf ile başlamalı ve en az 1 rakam içermelidir.';
+    }
+    return '';
+  };
+
+  const handleNameChange = (e) => {
+    setFormData(prev => ({ ...prev, name: e.target.value }));
+    if (submitted) {
+      setFormErrors(prev => ({ ...prev, name: validateName(e.target.value) }));
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    setFormData(prev => ({ ...prev, email: e.target.value }));
+    if (submitted) {
+      setFormErrors(prev => ({ ...prev, email: validateEmail(e.target.value) }));
+    }
+  };
+
+  const handlePasswordChange = (e) => {
+    setFormData(prev => ({ ...prev, password: e.target.value }));
+    if (submitted) {
+      setFormErrors(prev => ({ ...prev, password: validatePassword(e.target.value) }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(registerUser(formData));
+    setSubmitted(true);
+
+    const nameError = validateName(formData.name);
+    const emailError = validateEmail(formData.email);
+    const passwordError = validatePassword(formData.password);
+
+    setFormErrors({
+      name: nameError,
+      email: emailError,
+      password: passwordError,
+    });
+
+    if (!nameError && !emailError && !passwordError) {
+      dispatch(registerUser(formData));
+    }
   };
 
   return (
@@ -43,55 +110,41 @@ function Register() {
         <h2 className={styles.registerTitle}>Kayıt Sayfası</h2>
 
         <form className={styles.registerZone} onSubmit={handleSubmit}>
-          <label>
-            <span>İsim:</span>
-            <input
-              name="name"
-              type="text"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+          <label className={styles.registerInputGroup}>
+            <span className={styles.registerInputLabel}>İsim:</span>
+            <input className={styles.registerInputField} name="name" type="text" maxLength={30} value={formData.name} onChange={handleNameChange} required/>
           </label>
-          <label>
-            <span>E-mail:</span>
-            <input
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+
+            {submitted && formErrors.name && (<p className={styles.registerInputError}>{formErrors.name}</p>)}
+
+          <label className={styles.registerInputGroup}>
+            <span className={styles.registerInputLabel}>E-mail:</span>
+            <input className={styles.registerInputField} name="email" type="email" maxLength={30} value={formData.email} onChange={handleEmailChange} required/>
           </label>
-          <label>
-            <span>Şifre:</span>
-            <input
-              name="password"
-              type="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
+
+            {submitted && formErrors.email && (<p className={styles.registerInputError}>{formErrors.email}</p>)}
+
+          <label className={styles.registerInputGroup}>
+            <span className={styles.registerInputLabel}>Şifre:</span>
+            <input className={styles.registerInputField} name="password" type={showPassword ? 'text' : 'password'} maxLength={17} value={formData.password} onChange={handlePasswordChange} required/>
+            <button className={styles.registerEyeButton} type="button" onClick={() => setShowPassword(prev => !prev)} aria-label={showPassword ? 'Şifreyi gizle' : 'Şifreyi göster'}>
+              {showPassword ? (<EyeOff size={18} color="black" stroke="black" />) : (<Eye size={18} color="black" stroke="black" />)}
+            </button>
           </label>
-          <button type="submit" disabled={loading}>
-            {loading ? 'Kaydoluyor...' : 'Kaydol'}
-          </button>
+
+            {submitted && formErrors.password && (<p className={styles.registerInputError}>{formErrors.password}</p>)}
+
+          <button type="submit" disabled={loading} className={styles.registerSubmitButton}>{loading ? 'Kaydoluyor...' : 'Kaydol'}</button>
+
           {error && <p style={{ color: 'red' }}>{error}</p>}
-          <p className={styles.ifUWantToRegister}>
-            Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}
-            <Link to="/homepage">tıklayınız !</Link>
-          </p>
+
+          <p className={styles.ifUWantToRegister}>Eğer kayıt olmadan anasayfaya gitmek istiyorsanız{' '}<Link to="/homepage">tıklayınız !</Link></p>
         </form>
 
         <div className={styles.photographZone}>
           <h2 className={styles.tokenIsSafingYourInfos}>Tüm bilgileriniz Token ile gizlenmektedir.</h2>
           <hr className={styles.tokenIsSafingYourInfosHr}></hr>
-          <img
-            src={signUpImage}
-            alt="Kayıt Ol"
-            className={styles.registerImage}
-            loading="lazy"
-          />
+          <img className={styles.registerImage} src={signUpImage} alt="Kayıt Ol" loading="lazy"/>
         </div>
       </div>
     </Layout>
