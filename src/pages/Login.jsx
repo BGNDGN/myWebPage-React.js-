@@ -78,35 +78,64 @@ function Login() {
   return (
     <Layout videoUrl="https://burakgundogan.net/videos/20004535-uhd_2560_1440_30fps_wvukgh.mp4">
       <div className={styles.formContainer}>
-        <h2 className={styles.formTitle}>Giriş Yap</h2>
+        <h2 className={styles.formTitle}>Giriş Sayfası</h2>
 
         <form onSubmit={handleSubmit} className={styles.form}>
 
           <div className={styles.formGroup}>
             <label htmlFor="email">E-mail:</label>
-            <input id="email" type="email" name="email" maxLength={23} value={formData.email} onChange={handleChange} required/>
-            {formErrors.email && <p className={styles.errorMessage}>{formErrors.email}</p>}
+            <input
+              id="email"
+              name="email"
+              type="email"
+              maxLength={30}
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className={styles.formInput}
+            />
           </div>
+          {formErrors.email && <p className={styles.errorMessage}>{formErrors.email}</p>}
 
-          <div className={styles.formGroup}>
-            <label htmlFor="password">Şifre:</label>
-            <div className={styles.loginPasswordWrapper}>
-              <input id="password"type={showPassword ? 'text' : 'password'} maxLength={17} name="password" value={formData.password} onChange={handleChange} required/>
-              <button className={styles.loginEyeButton} type="button" onClick={() => setShowPassword(prev => !prev)}>
-                {showPassword ? <EyeOff size={18} color="black"/> : <Eye size={18} color="black"/>}
-              </button>
-            </div>
-            {formErrors.password && <p className={styles.errorMessage}>{formErrors.password}</p>}
-          </div>
+<div className={styles.formGroup}>
+  <label htmlFor="password">Şifre:</label>
+  <div className={styles.passwordInputWrapper}>
+    <input
+      id="password"
+      type={showPassword ? 'text' : 'password'}
+      maxLength={23}
+      name="password"
+      value={formData.password}
+      onChange={handleChange}
+      required
+      className={styles.formInput}
+    />
+    <button
+      type="button"
+      className={styles.eyeButton}
+      aria-label={showPassword ? 'Şifreyi gizle' : 'Şifreyi göster'}
+      onClick={() => setShowPassword(prev => !prev)}
+    >
+      {showPassword ? <EyeOff size={18} color="black" /> : <Eye size={18} color="black" />}
+    </button>
+  </div>
+</div>
+{formErrors.password && <p className={styles.errorMessage}>{formErrors.password}</p>}
 
-          <button type="submit" disabled={loading}>
+          <button
+            type="submit"
+            disabled={loading}
+            className={styles.submitButton}
+          >
             {loading ? 'Giriş yapılıyor...' : 'Giriş Yap'}
           </button>
 
+                  <p className={styles.loginPageParagraph}>
+          Kayıtlı değil misiniz? <Link to="/register">Kayıt olun!</Link>
+        </p>
         </form>
 
         {error && <p className={styles.errorMessage}>{error}</p>}
-        <p className={styles.loginPageParagraph}>Kayıtlı değil misiniz? <Link to="/register">Kayıt olun!</Link></p>
       </div>
     </Layout>
   );

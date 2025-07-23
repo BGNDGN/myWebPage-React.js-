@@ -1,161 +1,190 @@
 .formContainer {
-  max-width: 400px;
-  margin: 80px auto;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #1f2937;
-  color: #fff;
-  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
 
 .formTitle {
-  text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
 .form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.form label {
-  margin-bottom: 8px;
-  color: #555;
-}
-
-.form input[type="email"],
-.form input[type="password"],
-.form input[type="text"] {
-  padding: 10px 12px;
-  margin-bottom: 18px;
-  border: 1.5px solid #ccc;
-  border-radius: 6px;
-}
-
-.form input:focus {
-  outline: none;
-  border-color: #3f51b5;
-  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
-}
-
-.form button {
-  background-color: #3f51b5;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.form button:disabled {
-  background-color: #a2a2a2;
-  cursor: not-allowed;
-}
-
-.form button:hover:not(:disabled) {
-  background-color: #2c387e;
-}
-
-.errorMessage {
-  color: #d32f2f;
-  margin-top: 10px;
-  text-align: center;
+  align-items: center;
+  background: #1f2937;
+  padding: 30px 30px 10px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  max-width: 400px;
 }
 
 .formGroup {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
-}
-
-.form label {
-  margin-bottom: 6px;
-  color: #555;
-}
-
-.form input[type="email"],
-.form input[type="password"],
-.form input[type="text"] {
+  align-items: center;
+  gap: 10px;
   width: 100%;
-  padding: 10px 12px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.formGroup label {
+  min-width: 70px;
+  text-align: left;
+  color: white;
+}
+
+.formInput {
+  flex: 1 1 auto;
+  width: 100%;
+  padding: 12px 9px 12px 9px; 
   border: 1.5px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  color: #000;
+  background-color: #fff;
   box-sizing: border-box;
 }
 
-.loginPageParagraph {
-  text-align: center;
-  margin-top: 20px;
-  color: #666;
+.formInput:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px #4a90e2;
 }
 
-.loginPageParagraph a {
-  color: #3f51b5;
-  text-decoration: none;
-}
-
-.loginPageParagraph a:hover {
-  text-decoration: underline;
-}
-
-.loginPasswordWrapper {
+.passwordInputWrapper {
   position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
-.loginPasswordWrapper input {
-  width: 100%;
-  padding-right: 40px; 
-}
-
-.loginEyeButton {
-  all: unset;
+.eyeButton {
   position: absolute;
-  right: 0px;
-  top: 23%;
+  top: 50%;
+  right: 12px;
   transform: translateY(-50%);
-  background-color: transparent !important; 
+  background: transparent;
   border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
 }
 
+.eyeButton svg {
+  pointer-events: none;
+}
 
+.errorMessage {
+  color: #d32f2f;
+  width: 76%;       
+  text-align: center;  
+  margin-left: auto;  
+  margin-top: 4px;
+  margin-bottom: 30px;
+}
+
+.submitButton {
+  padding: 14px 30px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  max-width: 400px;
+  width: 100%;
+}
+
+.submitButton:disabled {
+  background-color: #a0c1f7;
+  cursor: not-allowed;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+.loginPageParagraph {
+  margin-top: 20px;
+  color: white;
+  max-width: 400px;
+  text-align: center;
+}
+
+.loginPageParagraph a {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.loginPageParagraph a:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
 
 @media (max-width: 768px) {
-  .formContainer {
-    margin: 20px auto 0 auto;
-    padding: 24px 20px;
-    width: 100%;
-    max-width: 95%;
-    box-sizing: border-box;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-  }
-
   .formTitle {
-    font-size: 22px;
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
-  .form input[type="email"],
-  .form input[type="password"],
-  .form input[type="text"] {
-    font-size: 15px;
-    padding: 10px;
+  .formContainer {
+    min-height: auto;
+    justify-content: center;
+    padding: 30px 20px;
+    gap: 40px;
   }
 
-  .form button {
+  .formGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .formGroup label {
+    min-width: auto;
+    margin-bottom: 5px;
+  }
+
+  .formInput {
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .submitButton {
+    width: 94%;
     font-size: 16px;
-    padding: 10px;
+    padding: 12px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .loginPageParagraph {
-    font-size: 14px;
-    padding: 0 10px;
+    width: 92%;
+    text-align: center;
+  }
+
+  .errorMessage {
+    margin-left: 0;
+    width: 100%;
   }
 }

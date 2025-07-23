@@ -5,13 +5,13 @@
   gap: 20px;
   padding: 40px 20px;
   max-width: 600px;
-  margin: 0 auto 60px auto; 
+  margin: 0 auto 60px auto;
   position: relative;
   z-index: 1;
   color: white;
   text-align: center;
   justify-content: flex-start;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .photographZone {
@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   background: #1f2937;
-  padding: 10px 0px 30px 0px; 
+  padding: 10px 0px 30px 0px;
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
@@ -31,7 +31,7 @@
   flex-direction: column;
   align-items: center;
   background: #1f2937;
-  padding: 30px 0px 10px 0px; 
+  padding: 30px 0px 10px 0px;
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
@@ -52,78 +52,89 @@
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
-.registerZone label {
+/* Yeni: label ve input yan yana için */
+.registerInputGroup {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  color: #333;
+  gap: 10px;
   width: 100%;
   max-width: 400px;
-  margin: 0 auto 15px auto;
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 600;
 }
 
-.registerZone label span {
-  min-width: 70px; 
+.registerInputGroup label {
+  min-width: 70px;
   text-align: left;
   color: white;
-}
-
-.registerZone input {
-  flex: 1; 
-  padding: 12px 15px;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-}
-
-.registerInputError {
-  color: #d32f2f;
-  width: 59%;
-  margin-left: 70px;
-  text-align: center;
-  margin-top: -5px;
-  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .registerInputField {
-  padding-right: 40px; 
+  flex: 1 1 auto;
+  width: 100%;          /* input tam genişlikte olsun */
+  box-sizing: border-box; /* padding ve border genişlikten sayılır */
+  padding: 12px 40px 12px 15px; /* sağda göz için padding */
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.registerInputGroup {
+/* Şifre inputu ve göz ikonu */
+.passwordInputWrapper {
   position: relative;
-}
-
-.registerEyeButton svg {
-  width: 18px !important;  
-  height: 18px !important; 
-  min-width: 18px;
-  min-height: 18px;
+  width: 100%;          /* Tam genişlik */
+  display: flex;
+  align-items: center;
 }
 
 .registerEyeButton {
-  all: unset;
   position: absolute;
-  top: 15%;
-  right: 0px;
-  margin-right: -10px;
+  top: 50%;
+  right: 12px;
   transform: translateY(-50%);
-  width: 0px !important;
-  height: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent !important;
-  border: none;
-  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 
-.registerZone input:focus {
+.registerEyeButton svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.registerInputField:focus {
   outline: none;
   border-color: #4a90e2;
   box-shadow: 0 0 5px #4a90e2;
 }
 
-.registerZone button {
-  margin-top: 15px;
+.registerEyeButton:hover {
+  opacity: 0.8;
+}
+
+.registerInputError {
+  color: #d32f2f;
+  width: 57%;          
+  text-align: center;
+  margin-right: 80px;    
+  margin-left: auto;   
+  margin-top: 4px;
+  margin-bottom: 30px;     
+}
+
+.registerSubmitButton {
   padding: 14px 30px;
   background-color: #4a90e2;
   color: white;
@@ -136,13 +147,13 @@
   width: 100%;
 }
 
-.registerZone button:disabled {
+.registerSubmitButton:disabled {
   background-color: #a0c1f7;
   cursor: not-allowed;
 }
 
-.registerZone button:hover:not(:disabled) {
-  background-color: #357ABD;
+.registerSubmitButton:hover:not(:disabled) {
+  background-color: #357abd;
 }
 
 .ifUWantToRegister {
@@ -157,7 +168,7 @@
 }
 
 .ifUWantToRegister a:hover {
-  color: #357ABD;
+  color: #357abd;
   text-decoration: underline;
 }
 
@@ -171,10 +182,8 @@
   margin-bottom: 40px;
 }
 
-
-
 @media (max-width: 768px) {
-  .registerTitle {
+.registerTitle {
     font-size: 26px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -189,75 +198,33 @@
     gap: 40px;
   }
 
-  .registerZone label {
-    flex-direction: row; 
-    align-items: center;
-    font-size: 16px;
-    margin-bottom: 12px;
-    margin-left: 20; 
-    justify-content: flex-start; 
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .registerZone label span {
-    text-align: left;
-    margin-bottom: 0; 
-    color: white;
-    margin-left: 0; 
-    min-width: 70px; 
-    margin-right: 15px; 
-  }
-
   .registerInputGroup {
-    padding-left: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
-  .registerInputError {
-    margin-right: -17px;
+  .registerInputGroup label {
+    min-width: auto;
+    margin-bottom: 5px;
   }
 
-  .registerZone input {
-    flex: none;
-    font-size: 16px;
+  .registerInputField {
+    width: 100%;
     padding: 10px 12px;
-    width: 67.5%; 
-    margin-left: 5px;
   }
 
-  .registerZone button {
-    width: 92%;
+  .registerSubmitButton {
+    width: 85%;
     font-size: 16px;
     padding: 12px;
-    margin-left: -1px;
-  }
-
-  .registerEyeButton {
-    right: 8%;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .ifUWantToRegister {
-    width: 90%;
+    width: 92%;
     text-align: center;
-  }
-
-  .pHomePage {
-    font-size: 16px;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .photographZone {
-    height: auto;
-    padding: 30px 20px;
-  }
-
-  .registerImage {
-    width: 100%;
-    height: auto;
-  }
-
-  .tokenIsSafingYourInfosHr {
-    width: 100%;
   }
 }
