@@ -138,6 +138,11 @@
   text-decoration: underline;
 }
 
+.userErrorMessage {
+  text-align: center;
+  color: red;
+}
+
 @media (max-width: 768px) {
   .formTitle {
     margin-top: 30px;

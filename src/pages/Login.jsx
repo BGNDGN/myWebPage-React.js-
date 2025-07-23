@@ -99,9 +99,9 @@ function Login() {
           <button className={styles.submitButton} type="submit" disabled={loading}>{loading ? 'Giriş yapılıyor...' : 'Giriş Yap'}</button>
 
           <p className={styles.loginPageParagraph}>Kayıtlı değil misiniz? <Link to="/register">Kayıt olun!</Link></p>
+          {error && <p className={styles.userErrorMessage}>{error}</p>}
         </form>
 
-        {error && <p className={styles.errorMessage}>{error}</p>}
       </div>
     </Layout>
   );
