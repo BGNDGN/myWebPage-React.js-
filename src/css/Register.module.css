@@ -45,14 +45,11 @@
 }
 
 .registerTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
   margin-bottom: 30px;
   color: white;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Yeni: label ve input yan yana için */
 .registerInputGroup {
   display: flex;
   align-items: center;
@@ -61,33 +58,29 @@
   max-width: 400px;
   margin-bottom: 15px;
   color: white;
-  font-weight: 600;
 }
 
 .registerInputGroup label {
   min-width: 70px;
   text-align: left;
   color: white;
-  font-weight: 600;
 }
 
 .registerInputField {
   flex: 1 1 auto;
-  width: 100%;          /* input tam genişlikte olsun */
-  box-sizing: border-box; /* padding ve border genişlikten sayılır */
-  padding: 12px 40px 12px 15px; /* sağda göz için padding */
+  width: 100%;          
+  box-sizing: border-box; 
+  padding: 12px 40px 12px 15px; 
   border: 1.5px solid #ccc;
   border-radius: 8px;
-  font-size: 1rem;
   color: #000;
   background-color: #fff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Şifre inputu ve göz ikonu */
 .passwordInputWrapper {
   position: relative;
-  width: 100%;          /* Tam genişlik */
+  width: 100%;         
   display: flex;
   align-items: center;
 }
@@ -141,7 +134,6 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-weight: 700;
   transition: background-color 0.3s ease;
   max-width: 400px;
   width: 100%;
@@ -184,7 +176,6 @@
 
 @media (max-width: 768px) {
 .registerTitle {
-    font-size: 26px;
     margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
@@ -217,7 +208,6 @@
 
   .registerSubmitButton {
     width: 85%;
-    font-size: 16px;
     padding: 12px;
     margin-right: 10px;
     margin-left: 10px;
