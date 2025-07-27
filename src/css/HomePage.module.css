@@ -238,6 +238,13 @@ li {
   text-align: center;
 }
 
+.registerInputError {
+  color: red;
+  margin-top: 5px;
+  padding: 4px 8px;
+  width: 27.5%;
+}
+
 h2, h3, h4, h5 {
   color: #1f2937;
   margin-bottom: 10px;
@@ -331,6 +338,10 @@ h2, h3, h4, h5 {
   .contactMeZone input,
   .contactMeZone button {
     font-size: 0.95rem;
+  }
+
+  .registerInputError {
+    width: 80.5%;
   }
 
   h2 {

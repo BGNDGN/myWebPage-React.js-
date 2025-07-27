@@ -10,34 +10,49 @@ import styles from '../css/HomePage.module.css';
 import Layout from '../components/Layout';
 
 function HomePage() {
+console.log(styles.registerInputError);
+
+
+
+
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   const validateEmail = (email) => {
+    if (!email) return ''; // boşsa hata yok, tarayıcı gösterecek
     const allowedDomains = ['gmail.com', 'hotmail.com', 'outlook.com'];
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) return 'Geçerli bir e-posta adresi girin.';
-    const domain = email.split('@')[1];
-    if (!allowedDomains.includes(domain)) return 'Geçerli gmail, hotmail veya outlook adresi girin.';
-
+    const parts = email.split('@');
+    if (parts.length !== 2) return 'Geçerli bir e-posta adresi girin.';
+    const domain = parts[1].toLowerCase();
+    if (!allowedDomains.includes(domain)) {
+      return 'Sadece gmail, hotmail veya outlook adresi girin.';
+    }
     return '';
   };
 
-  const handleSendMail = useCallback(() => {
+  const handleSendMail = useCallback((e) => {
+    e.preventDefault();
+    setSubmitted(true);
+
+    if (!email.trim()) {
+      setEmailError(''); // boşsa kendi hata mesajımız yok
+      return; // boşsa gönderme, tarayıcı uyarı verecek
+    }
+
     const error = validateEmail(email);
     setEmailError(error);
-
     if (error) return;
 
     const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=burakgundogan25@gmail.com&su=${encodeURIComponent(subject)}&body=Mail adresim:${email}`;
-    window.open(gmailURL, "_blank");
+    window.open(gmailURL, '_blank');
   }, [email, subject]);
 
   return (
     <Layout videoUrl="https://burakgundogan.net/videos/3129671-uhd_3840_2160_30fps_hzqcf0.mp4">
       <div>
+        {/* NAVBAR */}
         <div className={styles.navbarDiv}>
           <div className={styles.navbarPageName}>
             <Link to="/homepage">burakgundogan.net</Link>
@@ -53,16 +68,23 @@ function HomePage() {
           </div>
         </div>
 
+        {/* HAKKIMDA */}
         <div id="about" className={styles.aboutZone}>
           <h2>Hakkımda</h2>
           <hr />
-          <img src={burakImage} className={styles.burakImageHomePage} alt="Burak Gündoğan" loading="lazy" />
+          <img
+            src={burakImage}
+            className={styles.burakImageHomePage}
+            alt="Burak Gündoğan"
+            loading="lazy"
+          />
           <div className={styles.aboutZoneText}>
             <About />
           </div>
-          <hr className={styles.aboutZoneThisHrHasToHidden}/>
+          <hr className={styles.aboutZoneThisHrHasToHidden} />
         </div>
 
+        {/* DENEYİMLER */}
         <div id="experience" className={styles.experienceZone}>
           <h2>İş Deneyimlerim</h2>
           <hr />
@@ -72,6 +94,7 @@ function HomePage() {
           <hr />
         </div>
 
+        {/* TEKNOLOJİLER */}
         <div id="skills" className={styles.usingTechnologiesZone}>
           <h2>Kullandığım Teknolojiler</h2>
           <hr />
@@ -79,30 +102,61 @@ function HomePage() {
           <hr />
         </div>
 
+        {/* İLETİŞİM */}
         <div id="contact" className={styles.contactMeZone}>
           <h2>Benimle İletişime Geçin</h2>
-          <hr className={styles.contactMeZoneHr}/>
+          <hr className={styles.contactMeZoneHr} />
 
-          <div className={styles.mailDiv}>
-            <label>E-mail:
-              <input className={styles.mailInput} type="email" value={email} onChange={(e) => { setEmail(e.target.value); setEmailError(''); }} placeholder="E-posta adresiniz" maxLength={26}/>
-            </label>
-            {emailError && ( <p style={{ color: 'red', fontSize: '14px', marginTop: '4px' }}>{emailError}</p>)}
-          </div>
+          <form onSubmit={handleSendMail}>
+            <div className={styles.mailDiv}>
+              <label>
+                E-mail:
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (submitted) {
+                      setEmailError(validateEmail(e.target.value));
+                    }
+                  }}
+                  placeholder="E-posta adresiniz"
+                  maxLength={29}
+                  className={styles.mailInput}
+                  required
+                />
+              </label>
+              {submitted && email && emailError && (
+                <p className={styles.registerInputError}>{emailError}</p>
 
-          <div className={styles.subjectDiv}>
-            <label />Konu:
-            <textarea className={styles.subjectInput} type="text" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu başlığı"/>
-          </div>
+              )}
+            </div>
 
-          <div>
-            <button className={styles.contactMeButton} onClick={handleSendMail}>Gönder</button>
-          </div>
+            <div className={styles.subjectDiv}>
+              <label />
+              Konu:
+              <textarea
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                placeholder="Konu başlığı"
+                maxLength={405}
+                className={styles.subjectInput}
+                required
+              />
+            </div>
+
+            <div>
+              <button type="submit" className={styles.contactMeButton}>
+                Gönder
+              </button>
+            </div>
+          </form>
         </div>
 
+        {/* SOSYAL MEDYA */}
         <div id="socials" className={styles.socialMediasZone}>
           <h2>Sosyal Medya Hesaplarım</h2>
-          <hr className={styles.socialMediasZoneHr}/>
+          <hr className={styles.socialMediasZoneHr} />
           <Logos />
         </div>
       </div>
