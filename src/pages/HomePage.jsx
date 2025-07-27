@@ -52,7 +52,7 @@ console.log(styles.registerInputError);
   return (
     <Layout videoUrl="https://burakgundogan.net/videos/3129671-uhd_3840_2160_30fps_hzqcf0.mp4">
       <div>
-        {/* NAVBAR */}
+
         <div className={styles.navbarDiv}>
           <div className={styles.navbarPageName}>
             <Link to="/homepage">burakgundogan.net</Link>
@@ -68,7 +68,6 @@ console.log(styles.registerInputError);
           </div>
         </div>
 
-        {/* HAKKIMDA */}
         <div id="about" className={styles.aboutZone}>
           <h2>Hakkımda</h2>
           <hr />
@@ -84,7 +83,6 @@ console.log(styles.registerInputError);
           <hr className={styles.aboutZoneThisHrHasToHidden} />
         </div>
 
-        {/* DENEYİMLER */}
         <div id="experience" className={styles.experienceZone}>
           <h2>İş Deneyimlerim</h2>
           <hr />
@@ -94,7 +92,6 @@ console.log(styles.registerInputError);
           <hr />
         </div>
 
-        {/* TEKNOLOJİLER */}
         <div id="skills" className={styles.usingTechnologiesZone}>
           <h2>Kullandığım Teknolojiler</h2>
           <hr />
@@ -102,63 +99,35 @@ console.log(styles.registerInputError);
           <hr />
         </div>
 
-        {/* İLETİŞİM */}
         <div id="contact" className={styles.contactMeZone}>
           <h2>Benimle İletişime Geçin</h2>
           <hr className={styles.contactMeZoneHr} />
 
           <form onSubmit={handleSendMail}>
             <div className={styles.mailDiv}>
-              <label>
-                E-mail:
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    if (submitted) {
-                      setEmailError(validateEmail(e.target.value));
-                    }
-                  }}
-                  placeholder="E-posta adresiniz"
-                  maxLength={29}
-                  className={styles.mailInput}
-                  required
-                />
+              <label>E-mail:
+                <input className={styles.mailInput} type="email" value={email} onChange={(e) => { setEmail(e.target.value); if (submitted) { setEmailError(validateEmail(e.target.value)); }}} placeholder="E-posta adresiniz" required/>
               </label>
-              {submitted && email && emailError && (
-                <p className={styles.registerInputError}>{emailError}</p>
-
-              )}
+              {submitted && email && emailError && (<p className={styles.registerInputError}>{emailError}</p>)}
             </div>
 
             <div className={styles.subjectDiv}>
-              <label />
-              Konu:
-              <textarea
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                placeholder="Konu başlığı"
-                maxLength={405}
-                className={styles.subjectInput}
-                required
-              />
+              <label />Konu:
+              <textarea className={styles.subjectInput} value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu başlığı" required/>
             </div>
 
             <div>
-              <button type="submit" className={styles.contactMeButton}>
-                Gönder
-              </button>
+              <button type="submit" className={styles.contactMeButton}>Gönder</button>
             </div>
           </form>
         </div>
 
-        {/* SOSYAL MEDYA */}
         <div id="socials" className={styles.socialMediasZone}>
           <h2>Sosyal Medya Hesaplarım</h2>
           <hr className={styles.socialMediasZoneHr} />
           <Logos />
         </div>
+        
       </div>
     </Layout>
   );
