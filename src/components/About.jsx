@@ -24,7 +24,7 @@ function About() {
 
             <p><strong>💻 Geliştirdiğim Teknolojiler</strong></p>
             <ul>
-                <li><strong>Nuxt.js</strong>, <strong>React.js</strong>, <strong>Next.js</strong> ile <strong>Frontend</strong> kodları yazıyorum.</li>
+                <li><strong>React.js</strong>, <strong>Nuxt.js</strong>, <strong>Next.js</strong> ile <strong>Frontend</strong> kodları yazıyorum.</li>
                 <li><strong>Node.js</strong> ile <strong>Backend</strong> kodları yazıyorum.</li>
             </ul>
 

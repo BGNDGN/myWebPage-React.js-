@@ -12,8 +12,25 @@ import Layout from '../components/Layout';
 function HomePage() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
+  const [emailError, setEmailError] = useState('');
+
+  const validateEmail = (email) => {
+    const allowedDomains = ['gmail.com', 'hotmail.com', 'outlook.com'];
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) return 'Geçerli bir e-posta adresi girin.';
+    const domain = email.split('@')[1];
+    if (!allowedDomains.includes(domain)) return 'Geçerli gmail, hotmail veya outlook adresi girin.';
+
+    return '';
+  };
 
   const handleSendMail = useCallback(() => {
+    const error = validateEmail(email);
+    setEmailError(error);
+
+    if (error) return;
+
     const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=burakgundogan25@gmail.com&su=${encodeURIComponent(subject)}&body=Mail adresim:${email}`;
     window.open(gmailURL, "_blank");
   }, [email, subject]);
@@ -67,30 +84,15 @@ function HomePage() {
           <hr className={styles.contactMeZoneHr}/>
 
           <div className={styles.mailDiv}>
-            <label>
-              E-mail: 
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="E-posta adresiniz"
-                maxLength={29}
-                className={styles.mailInput}
-              />
+            <label>E-mail:
+              <input className={styles.mailInput} type="email" value={email} onChange={(e) => { setEmail(e.target.value); setEmailError(''); }} placeholder="E-posta adresiniz" maxLength={26}/>
             </label>
+            {emailError && ( <p style={{ color: 'red', fontSize: '14px', marginTop: '4px' }}>{emailError}</p>)}
           </div>
 
           <div className={styles.subjectDiv}>
-            <label />
-            Konu:
-            <textarea
-              type="text"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              placeholder="Konu başlığı"
-              maxLength={405}
-              className={styles.subjectInput}
-            />
+            <label />Konu:
+            <textarea className={styles.subjectInput} type="text" value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu başlığı"/>
           </div>
 
           <div>
