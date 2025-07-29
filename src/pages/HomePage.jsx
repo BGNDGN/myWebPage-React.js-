@@ -10,18 +10,13 @@ import styles from '../css/HomePage.module.css';
 import Layout from '../components/Layout';
 
 function HomePage() {
-console.log(styles.registerInputError);
-
-
-
-
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [emailError, setEmailError] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   const validateEmail = (email) => {
-    if (!email) return ''; // boşsa hata yok, tarayıcı gösterecek
+    if (!email) return '';
     const allowedDomains = ['gmail.com', 'hotmail.com', 'outlook.com'];
     const parts = email.split('@');
     if (parts.length !== 2) return 'Geçerli bir e-posta adresi girin.';
@@ -37,8 +32,8 @@ console.log(styles.registerInputError);
     setSubmitted(true);
 
     if (!email.trim()) {
-      setEmailError(''); // boşsa kendi hata mesajımız yok
-      return; // boşsa gönderme, tarayıcı uyarı verecek
+      setEmailError('');
+      return;
     }
 
     const error = validateEmail(email);
